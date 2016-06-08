@@ -1,0 +1,564 @@
+//post output style
+
+.post-pfl-pic{
+    width: 62px;
+    height:62px;
+    padding-right:12px;
+    >a{
+        >img{
+            width: 50px;
+            height:50px;
+            @include radius(50%);
+        }
+    }
+}
+
+.avatar-post{
+    width: 50px;
+    height:50px;
+    @include radius(50%);
+}
+
+.post-output-box{
+
+}
+
+
+.post-type{
+    color: $gg-gray;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+.post-header{
+    padding:15px 30px 16px;
+    position: relative;
+
+    >.lfloat{
+        margin-right:10px;
+    }
+    >.of-h{
+        margin-top: 20px;
+    }
+    .post-meta{
+//        @extend .d-inline;
+
+
+        >:nth-child(n+1){
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 12px;
+            color: $gg-gray;
+            font-weight: 700;
+            &.post-time{
+                font-weight:400;
+            }
+        }
+        .post-privacy{
+            i{
+                font-size: 16px;
+                vertical-align: middle;
+            }
+        }
+        .dot-v-dropdown, .dot-v-dropdown{
+            [data-toggle="dropdown"]{
+                >i{
+                    font-size: 16px;
+                    vertical-align: middle;
+                }
+            }
+
+            .dropdown-menu{
+                margin-right: -15px;
+            }
+        }
+    }
+
+}
+
+.dot-v-dropdown, .dot-v-dropdown{
+
+}
+
+
+
+.post-type-content{
+    margin-top:12px;
+    p{
+        color:$gg-gray;
+        font-size: 13px;
+
+        .emo{
+            padding:0 3px;
+            &:first-child{
+                padding-left:0;
+            }
+        }
+
+        .post-feeling{
+            color:$gg-gray-darker;
+        }
+    }
+}
+
+   .post-video{
+       position:relative;
+        video{
+            width:100%;
+            height: 450px;
+        }
+        .play-btn{
+            font-size: 60px;
+
+            &:hover{
+                @include opacity(0.9);
+            }
+        }
+        .video-poster{
+            @extend .abs-layer;
+            overflow:hidden;
+        }
+    }
+.post-output-box{
+    .post-content{
+        p{
+            line-height: 24px;
+            word-wrap: break-word;
+        }
+
+        .post-video{
+            video{
+                width:100%;
+                height: 450px;
+            }
+            .play-btn{
+                font-size: 60px;
+
+                &:hover{
+                    @include opacity(0.9);
+                }
+            }
+            .video-poster{
+                @extend .abs-layer;
+                overflow:hidden;
+            }
+        }
+        .post-image{
+            position:relative;
+            a{
+                display:block;
+                max-height:450px;
+                overflow:hidden;
+            }
+        }
+        .post-audio{
+            position:relative;
+            margin-bottom: 20px;
+        }
+        .play-btn{
+            cursor:pointer;
+        }
+
+        >[class^="post-"]:not(:last-child){
+            //margin-bottom: 10px;
+        }
+    }
+    .post-pad{
+        padding:0 30px;
+    }
+
+    .share-post{
+       border: 1px solid $gg-light-gray;
+
+        .post-box{
+            @include box-shadow(none);
+        }
+    }
+
+}
+
+//Post link style
+.post-output-video{
+    padding:0 0 15px;
+    position:relative;
+}
+.link-share-box{
+    padding:15px;
+    border: 1px solid $border-color;
+    @include radius(3px);
+    position:relative;
+    .media{
+        max-height:320px;
+        overflow:hidden;
+        margin-bottom:20px;
+    }
+    h4{
+        margin-bottom:5px;
+    }
+    p{
+        margin-bottom:0;
+    }
+    .site-link{
+        text-transform: uppercase;
+        font-size:10px;
+    }
+}
+.link-share-media{
+    padding:0 0 15px;
+    position:relative;
+    .post-input-link{
+        padding:0;
+    }
+}
+
+
+.post-footer{
+    padding: 12px 30px 19px;
+}
+.post-schedule-footer{
+    padding: 10px 30px 13px;
+    background: $gg-light-gray;
+    border-top:1px solid $gg-blue;
+    @include radius(0 0 3px 3px);
+    margin-top:10px;
+    
+    p{
+        margin:0;
+        
+        span{
+            font-weight:600;
+            color:$gg-primary-color;
+        }
+    }
+    i{
+        vertical-align: middle;
+        padding-right:6px;
+        color:$gg-secondary-color;
+    }
+}
+
+.panel-nav-box{
+    margin-bottom:20px;
+    .panel-header{
+        padding:24px 30px 10px;
+    }
+    .nav-area{
+        padding:0 30px;
+    }
+}
+
+
+.before-icon{
+    font-family: 'gg-iconset';
+}
+
+.active{
+    >[class^="gg-like"]{
+        &:before{
+            @extend .before-icon;
+            content: "\e96f";
+            color: $gg-primary-color;
+        }
+    }
+    >[class^="gg-dislike"]{
+        &:before{
+           @extend .before-icon;
+           content: "\e95d";
+           color: $gg-primary-color;
+        }
+    }
+    >[class^="gg-chat"]{
+        &:before{
+           color: $gg-antique;
+        }
+    }
+     >[class^="gg-heart"]{
+        &:before{
+//           color: $gg-pink;
+        }
+    }
+
+}
+
+
+
+
+.post-interaction-list{
+    >li{
+        margin-right:0;
+        width: 60px;
+
+        >a{
+            i{
+                position:relative;
+
+                &[class^="gg-like"]{
+                    top:-3px;
+                }
+                &[class^="gg-dislike"]{
+                    bottom:-2px;
+                }
+            }
+
+            &.post-favourite-link{
+                &.active{
+                     color:$gg-pink;
+                    i{
+                        color:$gg-pink;
+                    }
+                }
+            }
+            &.post-sad-link{
+                 &.active{
+                     color:$gg-antique;
+                    i{
+                        color:$gg-antique;
+                    }
+                }
+            }
+            &.post-heart-break-link{
+                 &.active{
+                    color:$gg-blue-darkest;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+//post interaction icon color
+
+.post-comment-link {
+    &.active{
+
+    }
+}
+.post-favourite-link {
+    &.active{
+        color:$gg-pink;
+    }
+}
+.post-heartbroken-link {
+    &.active{
+        color:$gg-pink;
+    }
+}
+.post-sad-link {}
+
+
+
+//timeline photo album
+.timeline-photo-album{
+    padding: 10px 20px;
+
+    img{
+        padding: 2px;
+        background: transparent;
+    }
+}
+
+//Post type style
+
+.post-img-gallery{
+
+}
+.img-grid{
+    font-size:0;
+    display:block;
+    a{
+        padding-bottom:10px;
+        display: inline-block;
+        box-sizing: border-box;
+        overflow:hidden;
+        position:relative;
+    }
+    &.five{
+        height: 600px;
+        a{
+            width: 50%;
+            vertical-align: top;
+            position:relative;
+
+            img{
+                height:100%;
+                width:100%;
+            }
+
+            &:nth-child(1){
+                padding-right: 5px;
+                height:50%;
+            }
+            &:nth-child(2){
+                padding-left: 5px;
+                height:33%;
+            }
+            &:nth-child(3){
+                padding-right: 5px;
+                height:50%;
+            }
+            &:nth-child(4){
+                padding-left: 5px;
+                height:33%;
+                position: relative;
+                top: -100px;
+            }
+            &:nth-child(5){
+                padding-left: 5px;
+                height:33%;
+                top: -199px;
+                position: relative;
+                left: 50%;
+            }
+        }
+    }
+    &.four{
+        a{
+            width: 50%;
+
+            &:nth-child(odd){
+                padding-right: 5px;
+            }
+            &:nth-child(even){
+                padding-left: 5px;
+            }
+        }
+    }
+     &.two{
+        a{
+            width: 50%;
+
+            &:nth-child(odd){
+                padding-right: 5px;
+            }
+            &:nth-child(even){
+                padding-left: 5px;
+            }
+        }
+    }
+      &.three{
+          height: 355px;
+        a{
+          vertical-align:top;
+            float:left;
+            img{
+                height: 100%;
+                width:100%;
+            }
+            &:first-child{
+                height:100%;
+                padding-right:5px;
+            }
+            &:nth-child(2){
+                padding-left:5px;
+                height:50%;
+            }
+            &:nth-child(3){
+                padding-left:5px;
+                height:50%;
+            }
+            width: 50%;
+        }
+    }
+}
+
+
+
+.emoticon-box-header
+{
+
+    >ul{
+    >li{
+        >a{
+            img{
+                max-width:100%;
+            }
+        }
+    }
+}
+}
+
+
+//Share post style
+
+.share-post-body{
+
+    padding:15px 20px 0;
+
+    .post-input-area-wrapper{
+        max-height:300px;
+        overflow:auto;
+    }
+    .post-input-wrapper{
+        padding:0;
+    }
+    .post-input-display-area{
+        padding:10px;
+    }
+    .post-user-tag{
+        padding:0 0 0 5px;
+        margin:0;
+    }
+    .post-box{
+        margin:0;
+
+        .post-text{
+            padding-bottom:10px;
+        }
+        .post-content{
+            pointer-events:none;
+        }
+    }
+    .post-audio{
+        padding-bottom: 15px;
+    }
+
+}
+.postShare{
+    @media only screen and (min-width:1200px){
+        .modal-dialog{
+            width:670px;
+        }
+    }
+    .modal-header{
+        padding:12px 15px;
+        border-bottom: 1px solid $border-color;
+        h4{
+            display:inline-block;
+        }
+    }
+    .modal-content{
+        @include radius(4px);
+    }
+    .post-toolbar-bottom{
+        @include radius(0 0 4px 4px);
+    }
+     .modal-tool-bar{
+        padding:20px 15px 0;
+    }
+    .dropdown-tag-user{
+        min-width:318px;
+    }
+    .search-dropdown .dropdown-menu{
+        top:35px;
+        z-index:100;
+    }
+}
+.editSchedulePost{
+    @extend .postShare;
+    
+    .post-input-media{
+        pointer-events: none;
+    }
+}
+.modal-header{
+    .close{
+        margin-top: 2px;
+        font-size: 12px;
+        position: absolute;
+        right:15px;
+        
+    }
+}

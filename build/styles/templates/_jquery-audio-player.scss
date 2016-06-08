@@ -1,0 +1,196 @@
+
+.jquery-audio-player{
+  background: $gg-light;
+  border: 1px solid $gg-border;
+
+ .audio-details{
+    .album-art{
+      vertical-align: top;
+      float:left;
+      img{
+        width: 70px;
+        max-height: 70px;
+        vertical-align: top;
+      }
+    }
+    .tract-info{
+      padding-left: 100px;
+      .track-title{
+        margin-bottom: 0;
+        margin-top: 14px;
+        font-weight: 700;
+      }
+      .track-album{
+
+      }
+    }
+  }
+
+  .player-controller{
+    height:40px;
+    position: relative;
+    >div{
+      position: absolute;
+    }
+
+    .playpause{
+      width: 70px;
+      height: 100%;
+      text-align: center;
+      cursor: pointer;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      a{
+        top: 50%;
+        left:50%;
+        position: absolute;
+        @include translate(-50%, -50%);
+        color: $gg-black-darker;
+      }
+    }
+
+    .time-current{
+      display: none;
+    }
+
+    .bar{
+      height: 2px;
+      background-color: $gg-gray;
+      cursor: pointer;
+      z-index: 1;
+      top: 50%;
+      right: 120px;
+      left: 90px;
+      margin-top: -1px;
+      div {
+        width: 0;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .bar-loaded{
+        background-color: $gg-gray;
+        z-index: 2;
+      }
+
+      .bar-played{
+        background-color: $gg-red;
+        z-index: 4;
+
+        &:after{
+          content: '';
+          height: 14px;
+          width: 14px;
+          background: $gg-red;
+          position: absolute;
+          right: 0;
+          top: -6px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+
+    .time-duration {
+      width: 60px;
+      height: 100%;
+      text-align: center;
+      z-index: 1;
+      top: 0;
+      color: $gg-black-darker;
+      line-height: 40px;
+      right: 50px;
+    }
+    .volume {
+      width: 60px;
+      height: 100%;
+      text-align: left;
+      cursor: pointer;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      overflow:hidden;
+
+      .volume-btn{
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        a{
+          display: block;
+          position: absolute;
+          top:50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $gg-black-darker;
+        }
+      }
+        
+        &:hover,
+        &:focus,
+        &:active{
+            overflow:visible;
+          .volume-adjust{
+            opacity: 1;
+          }
+        }
+
+      .volume-adjust{
+        opacity: 0;
+        height: 6.25em;
+        cursor: default;
+        position: absolute;
+        left: 0;
+        right: -1px;
+        background: transparent;
+        bottom: 34px;
+        >div{
+          width: 2px;
+          height: 80%;
+          background-color: $gg-gray;
+          cursor: pointer;
+          position: relative;
+          z-index: 1;
+          margin: 30% auto 0;
+
+          >div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: $gg-red;
+            &:after{
+              content: '';
+              height: 14px;
+              width: 14px;
+              background: $gg-red;
+              position: absolute;
+              right: -6px;
+              top: -6px;
+              border-radius: 50%;
+            }
+
+          }
+        }
+
+      }
+
+
+    }
+    &:not(.mute) .volume-btn a:after{
+      width: 0.313em;
+      height: 0.313em;
+      border: 0.25em double $gg-black-darker;
+      border-width: 0.25em 0.25em 0 0;
+      left: 0.563em;
+      top: -0.063em;
+      border-radius: 0 0.938em 0 0;
+      transform: rotate( 45deg );
+    }
+  }
+}
+

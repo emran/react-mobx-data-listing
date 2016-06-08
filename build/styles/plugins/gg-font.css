@@ -1,0 +1,594 @@
+@font-face {
+    font-family: 'gg-iconset';
+    src:    url('../fonts/gg-iconset.eot?cohz3g');
+    src:    url('../fonts/gg-iconset.eot?cohz3g#iefix') format('embedded-opentype'),
+    url('../fonts/gg-iconset.ttf?cohz3g') format('truetype'),
+    url('../fonts/gg-iconset.woff?cohz3g') format('woff'),
+    url('../fonts/gg-iconset.svg?cohz3g#gg-iconset') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="gg-"], [class*=" gg-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'gg-iconset' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.gg-event:before {
+    content: "\e900";
+}
+.gg-list:before {
+    content: "\e901";
+}
+.gg-cake:before {
+    content: "\e902";
+}
+.gg-gallery:before {
+    content: "\e903";
+}
+.gg-grid:before {
+    content: "\e904";
+}
+.gg-chat-double-fill:before {
+    content: "\e905";
+}
+.gg-circle-line:before {
+    content: "\e906";
+}
+.gg-circle-fill:before {
+    content: "\e907";
+}
+.gg-email-fill:before {
+    content: "\e908";
+}
+.gg-dribbble-fill:before {
+    content: "\e909";
+}
+.gg-facebook-fill:before {
+    content: "\e90a";
+}
+.gg-apple:before {
+    content: "\e90b";
+}
+.gg-pie-fill:before {
+    content: "\e90c";
+}
+.gg-pie-line:before {
+    content: "\e90d";
+}
+.gg-ellipsis-line-v:before {
+    content: "\e90e";
+}
+.gg-ellipsis-line-h:before {
+    content: "\e90f";
+}
+.gg-lock-fill:before {
+    content: "\e910";
+}
+.gg-folder-fill:before {
+    content: "\e911";
+}
+.gg-phone-fill:before {
+    content: "\e912";
+}
+.gg-video-cam-fill:before {
+    content: "\e913";
+}
+.gg-microphone-fill:before {
+    content: "\e914";
+}
+.gg-bell-fill:before {
+    content: "\e915";
+}
+.gg-share-alt-fill:before {
+    content: "\e916";
+}
+.gg-heart-fill:before {
+    content: "\e917";
+}
+.gg-image-fill:before {
+    content: "\e918";
+}
+.gg-plus-light:before {
+    content: "\e919";
+}
+.gg-plus-bold:before {
+    content: "\e91a";
+}
+.gg-setting-fill:before {
+    content: "\e91b";
+}
+.gg-youtube-fill:before {
+    content: "\e91c";
+}
+.gg-bookmark-fill:before {
+    content: "\e91d";
+}
+.gg-rating-fill:before {
+    content: "\e91e";
+}
+.gg-camera-fill:before {
+    content: "\e91f";
+}
+.gg-location-marker-fill:before {
+    content: "\e920";
+}
+.gg-location-marker:before {
+    content: "\e921";
+}
+.gg-pencil:before {
+    content: "\e922";
+}
+.gg-dotted-line-h:before {
+    content: "\e923";
+}
+.gg-dotted-line-v:before {
+    content: "\e924";
+}
+.gg-ellipsis-v:before {
+    content: "\e925";
+}
+.gg-ellipsis-h:before {
+    content: "\e926";
+}
+.gg-navicon:before {
+    content: "\e927";
+}
+.gg-check:before {
+    content: "\e928";
+}
+.gg-key:before {
+    content: "\e929";
+}
+.gg-setting-cog:before {
+    content: "\e92a";
+}
+.gg-cross:before {
+    content: "\e92b";
+}
+.gg-down-mini:before {
+    content: "\e92c";
+}
+.gg-next-mini:before {
+    content: "\e92d";
+}
+.gg-previous-mini:before {
+    content: "\e92e";
+}
+.gg-up-mini:before {
+    content: "\e92f";
+}
+.gg-trash:before {
+    content: "\e930";
+}
+.gg-desktop:before {
+    content: "\e931";
+}
+.gg-laptop:before {
+    content: "\e932";
+}
+.gg-google-plus:before {
+    content: "\e933";
+}
+.gg-instagram:before {
+    content: "\e934";
+}
+.gg-youtube:before {
+    content: "\e935";
+}
+.gg-rss:before {
+    content: "\e936";
+}
+.gg-flickr:before {
+    content: "\e937";
+}
+.gg-dribbble:before {
+    content: "\e938";
+}
+.gg-facebook:before {
+    content: "\e939";
+}
+.gg-twitter:before {
+    content: "\e93a";
+}
+.gg-skype:before {
+    content: "\e93b";
+}
+.gg-android:before {
+    content: "\e93c";
+}
+.gg-windows:before {
+    content: "\e93d";
+}
+.gg-control:before {
+    content: "\e93e";
+}
+.gg-video:before {
+    content: "\e93f";
+}
+.gg-badge:before {
+    content: "\e940";
+}
+.gg-rocket:before {
+    content: "\e941";
+}
+.gg-speaker-mute:before {
+    content: "\e942";
+}
+.gg-speaker:before {
+    content: "\e943";
+}
+.gg-globe:before {
+    content: "\e944";
+}
+.gg-email:before {
+    content: "\e945";
+}
+.gg-face-sad:before {
+    content: "\e946";
+}
+.gg-timeline:before {
+    content: "\e947";
+}
+.gg-user:before {
+    content: "\e948";
+}
+.gg-power:before {
+    content: "\e949";
+}
+.gg-round-ross:before {
+    content: "\e94a";
+}
+.gg-video-cam:before {
+    content: "\e94b";
+}
+.gg-award:before {
+    content: "\e94c";
+}
+.gg-bell:before {
+    content: "\e94d";
+}
+.gg-down-big:before {
+    content: "\e94e";
+}
+.gg-next-big:before {
+    content: "\e94f";
+}
+.gg-previous-big:before {
+    content: "\e950";
+}
+.gg-up-big:before {
+    content: "\e951";
+}
+.gg-bookmark:before {
+    content: "\e952";
+}
+.gg-bulb:before {
+    content: "\e953";
+}
+.gg-calendar:before {
+    content: "\e954";
+}
+.gg-camera:before {
+    content: "\e955";
+}
+.gg-chat-double:before {
+    content: "\e956";
+}
+.gg-chat-single-line:before {
+    content: "\e957";
+}
+.gg-circle-tick:before {
+    content: "\e958";
+}
+.gg-clip:before {
+    content: "\e959";
+}
+.gg-clock:before {
+    content: "\e95a";
+}
+.gg-crop:before {
+    content: "\e95b";
+}
+.gg-cross-big:before {
+    content: "\e95c";
+}
+.gg-dislike-fill:before {
+    content: "\e95d";
+}
+.gg-download:before {
+    content: "\e95e";
+}
+.gg-edit-circle:before {
+    content: "\e95f";
+}
+.gg-eye:before {
+    content: "\e960";
+}
+.gg-face-laugh:before {
+    content: "\e961";
+}
+.gg-face-smile:before {
+    content: "\e962";
+}
+.gg-feed:before {
+    content: "\e963";
+}
+.gg-file:before {
+    content: "\e964";
+}
+.gg-files:before {
+    content: "\e965";
+}
+.gg-folder:before {
+    content: "\e966";
+}
+.gg-follower:before {
+    content: "\e967";
+}
+.gg-following:before {
+    content: "\e968";
+}
+.gg-group:before {
+    content: "\e969";
+}
+.gg-headphone:before {
+    content: "\e96a";
+}
+.gg-heart:before {
+    content: "\e96b";
+}
+.gg-history:before {
+    content: "\e96c";
+}
+.gg-home:before {
+    content: "\e96d";
+}
+.gg-image:before {
+    content: "\e96e";
+}
+.gg-like-fill:before {
+    content: "\e96f";
+}
+.gg-like-line:before {
+    content: "\e970";
+}
+.gg-lock:before {
+    content: "\e971";
+}
+.gg-microphone:before {
+    content: "\e972";
+}
+.gg-music-note:before {
+    content: "\e973";
+}
+.gg-wallet:before {
+    content: "\e974";
+}
+.gg-nominee:before {
+    content: "\e975";
+}
+.gg-warning:before {
+    content: "\e976";
+}
+.gg-briefcase:before {
+    content: "\e977";
+}
+.gg-chat-single-fill:before {
+    content: "\e978";
+}
+.gg-pen:before {
+    content: "\e979";
+}
+.gg-phone:before {
+    content: "\e97a";
+}
+.gg-play-fill:before {
+    content: "\e97b";
+}
+.gg-radar:before {
+    content: "\e97c";
+}
+.gg-rating:before {
+    content: "\e97d";
+}
+.gg-search:before {
+    content: "\e97e";
+}
+.gg-setting:before {
+    content: "\e97f";
+}
+.gg-share-line:before {
+    content: "\e980";
+}
+.gg-share:before {
+    content: "\e981";
+}
+.gg-share-fill:before {
+    content: "\e982";
+}
+.gg-upload:before {
+    content: "\e983";
+}
+.gg-support:before {
+    content: "\e984";
+}
+.gg-round-puls:before {
+    content: "\e985";
+}
+.gg-round-minus:before {
+    content: "\e986";
+}
+.gg-dislike:before {
+    content: "\e987";
+}
+.gg-play-line:before {
+    content: "\e988";
+}
+.gg-add-friend:before {
+    content: "\e989";
+}
+.gg-refresh:before {
+    content: "\e98a";
+}
+.gg-repeat:before {
+    content: "\e98b";
+}
+.gg-unlink:before {
+    content: "\e98c";
+}
+.gg-link:before {
+    content: "\e98d";
+}
+.gg-previous:before {
+    content: "\e98e";
+}
+.gg-up:before {
+    content: "\e98f";
+}
+.gg-next:before {
+    content: "\e990";
+}
+.gg-down:before {
+    content: "\e991";
+}
+.gg-gagagugu-logo:before {
+    content: "\e992";
+}
+.gg-git:before {
+    content: "\e993";
+}
+.gg-mobile:before {
+    content: "\e994";
+}
+.gg-pinned-fill:before {
+    content: "\e995";
+}
+.gg-pin-fill:before {
+    content: "\e996";
+}
+.gg-pin:before {
+    content: "\e997";
+}
+.gg-pinned:before {
+    content: "\e998";
+}
+.gg-chat-single-dot-fill:before {
+    content: "\e999";
+}
+.gg-chat-single-dot:before {
+    content: "\e99a";
+}
+.gg-folder-fill2 .path1:before {
+    content: "\e99b";
+    color: rgb(66, 66, 66);
+}
+.gg-folder-fill2 .path2:before {
+    content: "\e99c";
+    margin-left: -1em;
+    color: rgba(66, 66, 66, 0.2);
+}
+.gg-folder-fill-plus .path1:before {
+    content: "\e99d";
+    color: rgb(66, 66, 66);
+}
+.gg-folder-fill-plus .path2:before {
+    content: "\e99e";
+    margin-left: -1em;
+    color: rgba(66, 66, 66, 0.2);
+}
+.gg-folder-plus:before {
+    content: "\e99f";
+}
+.gg-expand:before {
+    content: "\e9a0";
+}
+.gg-collaps:before {
+    content: "\e9a1";
+}
+.gg-ghost:before {
+    content: "\e9a2";
+}
+.gg-call-receive:before {
+    content: "\e9a3";
+}
+.gg-call-reject:before {
+    content: "\e9a4";
+}
+.gg-microphone-fill-mute:before {
+    content: "\e9a5";
+}
+.gg-video-recorder:before {
+    content: "\e9a6";
+}
+.gg-bookmark-plus:before {
+    content: "\e9a7";
+}
+.gg-internal-link:before {
+    content: "\e9a8";
+}
+.gg-tags:before {
+    content: "\e9a9";
+}
+.gg-tag:before {
+    content: "\e9aa";
+}
+.gg-power-bold:before {
+    content: "\e9ab";
+}
+.gg-support-fill:before {
+    content: "\e9ac";
+}
+.gg-graduation-cap:before {
+    content: "\e9ad";
+}
+.gg-external-link:before {
+    content: "\e9ae";
+}
+.gg-profile-avatar-fill:before {
+    content: "\e9af";
+}
+.gg-profile-avatar-line:before {
+    content: "\e9b0";
+}
+.gg-check-bold:before {
+    content: "\e9b1";
+}
+.gg-globe-fill:before {
+    content: "\e9b2";
+}
+.gg-poll:before {
+    content: "\e9b3";
+}
+.gg-heart-break:before {
+    content: "\e9b4";
+}
+
+.gg-judgement:before {
+    content: "\e9b5";
+}
+.gg-funnel:before {
+    content: "\e9b6";
+}
+.gg-pause:before {
+    content: "\e9b7";
+}
+.gg-circle:before {
+    content: "\e9b8";
+}
+.gg-spinner:before {
+    content: "\e9b9";
+}
+.gg-save:before {
+    content: "\e9ba";
+}

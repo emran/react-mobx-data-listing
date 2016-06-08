@@ -1,0 +1,448 @@
+/* buttons */
+
+.btn,
+.btn-default,
+.btn-primary,
+.btn-accent,
+.btn-info,
+.btn-success,
+.btn-warning,
+.btn-danger,
+.btn-icon,
+.btn-img,
+.btn-follow,
+.btn-check,
+.btn-cross{
+    font-family: $btn-font;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    line-height:$btn-line-height;
+    text-transform: capitalize;
+    padding: 0 20px;
+    @include radius(3px);
+    display: inline-block;
+    border-color:transparent;
+    border: 1px solid transparent;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+
+    
+    
+    &.s-w,&.btn-sw{
+        padding: 0 29px;
+    }
+    &.i-w,&.btn-iw{
+        padding: 0 15px;
+    }
+    &.upper,&.btn-upper{
+        text-transform: uppercase;
+    }
+    &.cap,&.btn-cap{
+        text-transform: capitalize;
+    }
+    
+    &.following{
+        padding-left:30px;
+        
+        &:before{
+            position:absolute;
+            content:"\e9b1";
+            font-family: "gg-iconset";
+            left:10px;
+            top:0;
+        }
+    }
+    
+    
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.active:focus,
+    &.focus,
+    &:active.focus,
+    &.active.focus {
+        outline:0;
+        @include box-shadow(none);
+        border-color:transparent;
+    }
+    
+    
+    
+    i{
+        display: inline-block;
+
+        &:first-child{
+            padding-right: 6px;
+            padding-left: 0px;
+        }
+        &:last-child{
+            padding-right: 0px;
+            padding-left: 6px;
+        }
+        
+        &:only-child{
+            padding:0;
+        }
+    }
+    
+  
+    
+    &.disabled{
+        pointer-events:none;
+        cursor:not-allowed;
+        @include opacity(0.5);
+        
+        &:hover,&:focus,&:active{
+            
+        }
+    }
+}
+
+
+//Default button
+
+.btn-default {
+    border: 1px solid $border-color;
+    background: $btn-default-bg;
+    color: $btn-color;
+
+    
+    &.unfollow{
+        border: 1px solid $btn-primary-bg;
+        background: $btn-primary-bg;
+        color: $btn-color-light;
+    }
+    
+    &:hover{
+        border: 1px solid $border-color;
+        background: $btn-default-hover-bg;
+        color:$btn-color;
+    }
+    
+    
+    &:focus,
+    &:active,
+    &.active:focus,
+    &:active:hover{
+        border: 1px solid $border-color;
+        background: $btn-default-hover-bg;
+        color:$btn-color;
+    }
+}
+
+
+
+
+
+//Icon button
+.btn-icon {
+    border: 1px solid $border-color;
+    background: $btn-default-bg;
+    color: $btn-color;
+    font-size: 18px;
+    width: 34px;
+    padding:0;
+    vertical-align: middle;
+    &[data-toggle="dropdown"]{
+        >i{
+            color: $btn-color;
+            
+            &[class^="gg-setting"]{
+                font-size: 15px;
+            }
+        }
+    }
+    
+    
+    
+    
+    &:hover{
+        border: 1px solid $btn-primary-bg;
+        background: $btn-primary-bg;
+        color:$gg-light;
+        
+        >i{
+            color: $gg-light;
+        }
+    }
+    
+    
+
+}
+
+//Icon button
+.btn-img {
+    border: 1px solid $border-color;
+    background: $btn-default-bg;
+    color: $btn-color;
+    font-size: 18px;
+    width: 48px;
+    padding:0;
+    vertical-align: middle;
+    
+    &.btn-trans{
+        border: 1px solid transparent;
+        background: transparent; 
+    }
+    &[data-toggle="dropdown"]{
+        padding-left:5px;
+        
+        >img{
+            display:inline-block;
+            width: 20px;
+            height:18px;
+            margin:0;
+            position:relative;
+        }
+        >i{
+            font-size: 8px;
+            color: $btn-color;
+            padding-left:2px!important;
+            position:relative;
+            
+            &[class^="gg-setting"]{
+                font-size: 15px;
+            }
+        }
+    }
+    
+    
+    
+    
+    &:hover{
+        border: 1px solid $border-color;
+        background: $btn-default-bg;
+        color: $btn-color;
+      
+    }
+    
+    
+
+}
+.open> .btn-img{
+     border: 1px solid $border-color;
+    background: $btn-default-bg;
+}
+
+
+.btn-cross {
+    border: 1px solid $border-color;
+    background: $btn-default-bg;
+    color: $btn-color;
+    font-size: 18px;
+    width: 34px;
+    padding:0;
+    vertical-align: middle;
+    &[data-toggle="dropdown"]{
+        >i{
+            color: $btn-color;
+        }
+    }
+    
+    &:hover{
+        border: 1px solid $gg-primary-color;
+        background: $gg-primary-color;
+        color: $btn-color;
+        
+        >i{
+            color: $gg-light;
+        }
+    }
+    
+    
+    &:focus,
+    &:active,
+    &.active,
+    &.active:focus,
+    &.active:hover,
+    &:active:hover{
+        border: 1px solid $gg-primary-color;
+        background: $gg-primary-color;
+        color:$gg-light;
+    }
+}
+
+
+.btn-check {
+    border: 1px solid $btn-primary-bg;
+    background: $btn-primary-bg;
+    color: $gg-light;
+    font-size: 14px;
+    width: 34px;
+    padding:0;
+    vertical-align: middle;
+    &[data-toggle="dropdown"]{
+        >i{
+            color: $btn-color;
+        }
+    }
+    
+    &:hover{
+        border: 1px solid $gg-blue-darker;
+        background: $gg-blue-darker;
+        color:$gg-light;
+        
+        >i{
+            color: $gg-light;
+        }
+    }
+    
+    
+    &:focus,
+    &:active,
+    &.active,
+    &.active:focus,
+    &.active:hover,
+    &:active:hover{
+        border: 1px solid $gg-blue-darker;
+        background: $gg-blue-darker;
+        color:$gg-light;
+    }
+}
+
+
+
+
+
+
+.open {
+    .btn-icon{
+        &[data-toggle="dropdown"] {
+            >i{
+                color: $gg-light;
+            }
+        }
+    }
+}
+
+
+//Button cross
+
+.btn-cross{
+    font-size: 10px;
+}
+
+
+
+//Primary button
+
+.btn-primary, .btn-follow {
+    border: 1px solid $btn-primary-bg;
+    background: $btn-primary-bg;
+    color: $btn-color-light;
+
+    
+    &.unfollow{
+        border: 1px solid $border-color;
+        background: $btn-default-bg;
+        color: $btn-color;
+    }
+    
+    &:hover{
+        background: $btn-primary-hover-bg;
+        color: $btn-color-light;
+    }
+    
+    
+    &:focus,
+    &:active,
+    &.active:focus,
+    &:active:hover{
+        background: $btn-primary-hover-bg;
+        color: $btn-color-light;
+    }
+}
+
+
+
+//Primary button
+
+.btn-accent, .btn-follow {
+    border: 1px solid $gg-secondary-color;
+    background: $gg-secondary-color;
+    color: $btn-color-light;
+
+    
+    &.unfollow{
+        border: 1px solid $border-color;
+        background: $btn-default-bg;
+        color: $btn-color;
+    }
+    
+    &:hover{
+        background: $gg-secondary-color-darker;
+        border-color: $gg-secondary-color-darker;
+        color: $btn-color-light;
+    }
+    
+    
+    &:focus,
+    &:active,
+    &.active:focus,
+    &:active:hover{
+        background: $gg-secondary-color-darker;
+        color: $btn-color-light;
+    }
+}
+
+
+//Danger button
+
+.btn-danger {
+    border: 1px solid $btn-danger-bg;
+    background: $btn-danger-bg;
+    color: $btn-color-light;
+
+    
+    &:hover{
+        background: $btn-danger-hover-bg;
+        color: $btn-color-light;
+    }
+    
+    
+    &:focus,
+    &:active,
+    &.active:focus,
+    &:active:hover{
+        background: $btn-danger-hover-bg;
+        color: $btn-color-light;
+    }
+}
+
+
+
+
+//Button size
+
+.btn-sm{
+    padding: 0 15px !important;
+    line-height:$btn-line-height-sm;
+    font-size: $btn-font-size-sm;
+    
+    &.btn-sw{
+        padding: 0 20px !important;
+    }
+    &.btn-iw{
+        padding: 0 10px !important;
+    }
+}
+
+ .btn-icon{
+     &.btn-sm{
+        width:28px;
+        line-height:28px;
+        padding:0;
+     }
+}
+
+.btn-share-tag{
+//    min-width:245px;
+//    text-align: left;
+    i{
+        font-size:8px;
+//        position:absolute;
+//        top:13px;
+//        right:15px;
+    }
+}

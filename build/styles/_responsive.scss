@@ -1,0 +1,94 @@
+/* -------------------------------
+   all Large Devices only except small screen
+   ------------------------------- */
+@media screen and (min-width: 768px) {
+    
+}
+
+
+
+/* -------------------------------
+   Large Devices
+   ------------------------------- */
+
+@media screen and (max-width: 1200px) {
+   .work-list .media .media-body {
+      padding-top: 8px;
+      width: 370px;
+   }
+
+
+}
+
+@media screen and (max-width: 1199px) {
+
+
+}
+
+
+/* -------------------------------
+   Tablet Landscape
+   ------------------------------- */
+
+@media screen and (max-width: 1024px) {
+
+
+}
+
+
+@media screen and (max-width: 991px) {
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+}
+
+
+/* -------------------------------
+   Tablet Portrait
+   ------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+
+
+}
+
+
+/* -------------------------------
+   Phone
+   ------------------------------- */
+
+@media screen and (max-width: 480px) {
+
+
+}
+
+
+/* -------------------------------
+   Small Phone
+   ------------------------------- */
+
+@media screen and (max-width: 479px) {
+
+
+
+}
+
+
+
+
+
+
+
+
+

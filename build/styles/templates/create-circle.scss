@@ -1,0 +1,49 @@
+/*
+ * Create Circle CSS
+ */
+
+ .eng-modal {
+     .page-primary-info {
+         .select2-container {
+             display: block;
+             margin: auto;
+         }
+     }
+ }
+.create-intro {
+    p {
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+    }
+}
+
+// select 2
+.select2-container--default {
+    &.select2-container--focus .select2-selection--multiple,
+    .select2-selection--multiple {
+        color: $gg-gray-darker;
+        border: 1px solid $border-color;
+        background: $gg-light;
+        min-height: 105px;
+        .select2-selection__choice {
+            margin-top: 9px;
+            background-color: $gg-light-gray-darker;
+        }
+        .select2-selection__choice__remove {
+            float: right;
+            margin: 0 0 0 3px;
+        }
+    }
+}
+.select2-dropdown {
+    border: 1px solid $border-color;
+}
+.select2-container {
+    .select2-search--inline {
+        .select2-search__field {
+            margin: 0;
+            padding-top: 6px;
+        }
+    }
+}

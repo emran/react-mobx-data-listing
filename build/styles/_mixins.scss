@@ -1,0 +1,360 @@
+/*------------
+  Mixins
+-------------- */
+
+// Border Radius
+
+@mixin radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* Implementation */
+#div {
+  @include radius(10px);
+}
+
+
+
+@mixin radius-custom($topleft, $topright, $bottomleft, $bottomright){
+  -webkit-border-radius: $topleft $topright $bottomleft $bottomright;
+  -moz-border-radius: $topleft $topright $bottomleft $bottomright;
+  -ms-border-radius: $topleft $topright $bottomleft $bottomright;
+  border-radius: $topleft $topright $bottomleft $bottomright;
+}
+
+/* Implementation */
+#div{
+  @include radius-custom(20px, 20px, 0px, 0px);
+}
+
+
+// BOX SHADOW
+
+
+// BOX SHADOW
+
+@mixin box-shadow ($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  -ms-box-shadow: $value;
+  box-shadow: $value;
+}
+
+/* Implementation */
+#div {
+    @include box-shadow(5px  5px  6px  0.3);
+
+    //all rounmd shadow
+    @include box-shadow(0  0  6px  $shadow-color);
+
+    //Top side shadow
+    @include box-shadow( 0 -5px 5px -5px $shadow-color);
+    //Bottom side shadow
+    @include box-shadow( 0 5px 5px -5px $shadow-color);
+    //right side shadow
+    @include box-shadow( 5px 0 5px -5px $shadow-color);
+    //left side shadow
+    @include box-shadow( -5px 0 5px -5px $shadow-color);
+    
+}
+
+
+//Width height
+
+@mixin size($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin equal-size($width) {
+  width: $width;
+  height: $width;
+}
+
+
+/* Implementation */
+#div {
+  @include size(100px, 100px);
+  @include equal-size(100px);
+}
+
+
+//Circle radius
+@mixin circle {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* Implementation */
+
+#div {
+  @include circle();
+}
+
+
+//Flex display
+
+@mixin flex-container($direction, $wrap, $justify, $align-item, $align-content){
+    display: flex;
+    flex-direction: $direction;     // row | row-reverse | column | column-reverse
+    flex-wrap: $wrap;               // nowrap | wrap | wrap-reverse
+    justify-content: $justify;      // flex-start | flex-end | center | space-between | space-around
+    align-items: $align-item;       // flex-start | flex-end | center | baseline | stretch;
+    align-content: $align-content;  // flex-start | flex-end | center | space-between | space-around | stretch
+    
+}
+
+/* Implementation */
+#div {
+  @include flex-container(row,  nowrap,  flex-start, flex-start, flex-start);
+}
+
+
+// Opacity
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie);
+}
+
+#div {
+  @include opacity (0.9);
+}
+
+
+// Rgba opacity
+
+@mixin rgba-opacity ($color,$alpha) {
+  $rgba: rgba(red($color), green($color), blue($color),$alpha);
+  background-color: $color;
+  background-color: $rgba;
+}
+
+#div {
+  @include rgba-opacity ($gg-primary-color, .2);
+}
+
+
+
+/* Transiton -- Transform --  */
+// TRANSITION
+
+@mixin transition ($prop) {
+  -webkit-transition: $prop;
+  -moz-transition: $prop;
+  -o-transition: $prop;
+  -ms-transition: $prop;
+  transition: $prop;
+}
+
+/* Implementation */
+.transition{
+  @include transition (all  0.3s  ease-in);
+}
+
+@mixin transition-prop ($prop, $time, $effect) {
+  -webkit-transition: $prop $time $effect;
+  -moz-transition: $prop $time $effect;
+  -o-transition: $prop $time $effect;
+  -ms-transition: $prop $time $effect;
+  transition: $prop $time $effect;
+}
+
+
+/* Implementation */
+.transition-all {
+  @include transition-prop (all,  0.3s,  ease-in);
+}
+
+
+// Multi TRANSFORM Effect and Translate X axis
+
+@mixin transformX ($rotate, $scale, $skew, $translate) {
+  -webkit-transform: rotate($rotate) scale($scale) skew($skew) translatex($translate);
+  -moz-transform: rotate($rotate) scale($scale) skew($skew) translatex($translate);
+  -o-transform: rotate($rotate) scale($scale) skew($skew) translatex($translate);
+  -ms-transform: rotate($rotate) scale($scale) skew($skew) translatex($translate);
+  transform: rotate($rotate) scale($scale) skew($skew) translatex($translate);
+}
+
+
+/* Implementation */
+#div{
+	@include transformX(10px , 1, 0px, 0px);
+}
+
+// Multi TRANSFORM Effect and Translate Y axis
+
+@mixin transformY ($rotate, $scale, $skew, $translate) {
+  -webkit-transform: rotate($rotate) scale($scale) skew($skew) translatey($translate);
+  -moz-transform: rotate($rotate) scale($scale) skew($skew) translatey($translate);
+  -o-transform: rotate($rotate) scale($scale) skew($skew) translatey($translate);
+  -ms-transform: rotate($rotate) scale($scale) skew($skew) translatey($translate);
+  transform: rotate($rotate) scale($scale) skew($skew) translatey($translate);
+}
+
+/* Implementation */
+#div{
+	@include transformY(10px , 1, 0px, 0px);
+}
+
+
+//Only Translate  x and y
+@mixin translate( $x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+/* Implementation */
+#div{
+	@include translate(0,0);
+}
+
+
+//Only rotate
+@mixin rotate( $rotate) {
+  -webkit-transform:  rotate($rotate);
+  -moz-transform: rotate($rotate);
+  -o-transform: rotate($rotate);
+  -ms-transform: rotate($rotate);
+  transform: rotate($rotate);
+}
+
+/* Implementation */
+#div{
+	@include rotate(0deg);
+}
+
+
+//Only scale
+@mixin scale( $scalex, $scaley) {
+  -webkit-transform: scale($scalex , $scaley);
+  -moz-transform: scale($scalex , $scaley);
+  -o-transform: scale($scalex , $scaley);
+  -ms-transform: scale($scalex , $scaley);
+  transform: scale($scalex , $scaley);
+}
+
+/* Implementation */
+#div{
+	@include scale(1,1);
+}
+
+//Background-size cover
+
+@mixin cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+/* Implementation */
+#div{
+	@include cover();
+}
+
+
+// GRADIENT
+
+@mixin gradient ($origin: left, $start: #ffffff, $stop: #000000) {
+  background-color: $start;
+  background-image: -webkit-linear-gradient($origin, $start, $stop);
+  background-image: -moz-linear-gradient($origin, $start, $stop);
+  background-image: -o-linear-gradient($origin, $start, $stop);
+  background-image: -ms-linear-gradient($origin, $start, $stop);
+  background-image: linear-gradient($origin, $start, $stop);
+}
+
+@mixin gradient0 ($origin: left, $start: #ffffff, $stop: #000000) {
+  background-color: transparent;
+  background-image: -webkit-linear-gradient($origin, $start, $stop);
+  background-image: -moz-linear-gradient($origin, $start, $stop);
+  background-image: -o-linear-gradient($origin, $start, $stop);
+  background-image: -ms-linear-gradient($origin, $start, $stop);
+  background-image: linear-gradient($origin, $start, $stop);
+}
+
+
+/* gradient Implementation */
+#div {
+  @include gradient(left, #663333, #333333);
+}
+
+// QUICK GRADIENT 
+
+@mixin quick-gradient ($origin: top, $alpha: 0.2){
+  background-image: -webkit-linear-gradient($origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0,$alpha));
+  background-image: -moz-linear-gradient($origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0,$alpha));
+  background-image: -o-linear-gradient($origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0,$alpha));
+  background-image: -ms-linear-gradient($origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0,$alpha));
+  background-image: linear-gradient($origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0,$alpha));
+}
+
+
+
+/* Implementation */
+#div {
+  @include quick-gradient(top, 0.2);
+}
+
+
+
+// Placeholder text default
+// -------------------------
+@mixin placeholder($size, $color) {
+  &:-moz-placeholder {
+    font-size: $size;
+    color: $color!important;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    font-size: $size;
+    color: $color !important;
+  }
+  &:-ms-input-placeholder {
+    font-size: $size;
+    color: $color !important;
+  }
+  &::-webkit-input-placeholder {
+    font-size: $size;
+    color: $color !important;
+  }
+}
+
+
+// Input color on focus
+// -------------------------
+
+@mixin placeholder-focus($size, $color) {
+  &:focus::-webkit-input-placeholder {
+    font-size: $size;
+    color: $color !important;
+  }
+
+  &:focus::-moz-placeholder {
+    font-size: $size;
+    color: $color !important;
+  }
+  &:focus:-ms-input-placeholder {
+    font-size: $size;
+    color: $color !important;
+  }
+
+  &:focus:-ms-input-placeholder {
+    font-size: $size;
+    color: $color !important;
+  }
+}
+
+

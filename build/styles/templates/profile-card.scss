@@ -1,0 +1,141 @@
+/*
+Profile Card CSS
+*/
+
+.profile-card {
+    width: 310px;
+    background-color: $gg-light;
+    padding-bottom: 45px;
+    border-radius: 4px;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    &.bottom {
+        // top: 65px;
+        // left: 92px;
+        top: 27px;
+        left: 0;
+        &:before {
+            border-bottom: 10px solid $gg-gray-darker;
+            bottom: 100%;
+        }
+    }
+    &.top {
+        //bottom: 98px;
+        //left: 92px;
+        bottom: 27px;
+
+        left: 0;
+        &:after {
+            border-top: 10px solid $gg-gray-darker;
+            top: 100%;
+        }
+    }
+
+    @include box-shadow(0 0 5px $gg-shadow);
+    &:before,
+    &:after {
+        position: absolute;
+        left: 30px;
+        content: "";
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+
+
+
+    .profile-card-cover {
+        height: 105px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        position: relative;
+    }
+    .profile-card-avatar {
+        position: relative;
+        .avatar {
+            @include size(100px,100px);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            bottom: -47px;
+            img {
+                @include size(100%,100%);
+            }
+        }
+    }
+    .profile-card-intro {
+        margin-top: 48px;
+        padding: 10px 15px;
+        text-align: center;
+        .profile-title {
+            font-size: 18px;
+            color: $gg-black-darker;
+        }
+        .followers {
+            font-size: 14px;
+            line-height: 27px;
+            margin-bottom: 0;
+            color: $gg-black-darker;
+        }
+    }
+    .profile-tools-nav {
+        float: none;
+        text-align: center;
+        display: block;
+        text-align: center;
+        padding: 7px 15px 0;
+    }
+    .profile-info {
+        margin-top: 30px;
+        padding: 0 15px;
+        ul {
+            li {
+                text-align: center;
+                span {
+                    color: $gg-black-darker;
+                    font-size: 12px;
+                    font-weight: 400;
+                    i {
+                        margin-right: 10px;
+                        color: $gg-gray-darker;
+                        font-size: 14px;
+                        position: relative;
+                        top: 0.1em;
+                    }
+                    a {
+                        color: $gg-blue;
+                        font-weight: 400;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profile-link-thumb {
+    .profile-card {
+        &.bottom {
+            top: 62px;
+            left: -14px;
+        }
+        &.top {
+            bottom: 90px;
+            left: -14px;
+        }
+    }
+}
+
+.profile-link,
+.profile-link-thumb {
+    // .profile-card {
+    //     display: none;
+    // }
+    &:hover {
+        .profile-card {
+            display: block;
+        }
+    }
+}

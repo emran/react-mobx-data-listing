@@ -1,0 +1,74 @@
+.news-meta{
+    >li{
+        display:inline-block;
+        color:$text-color-dim;
+        line-height:11px;
+        padding:0 10px;
+//        font-size:16px;
+        
+        &:first-child{
+            padding-left:0;
+        }
+        &:nth-child(n+2){
+            border-left:1px solid $gg-black-darker;
+        }
+        >a{
+            color:$gg-black;
+            &:hover{
+                 color:$gg-black-darker;
+            }
+        }
+       
+    }
+}
+.news-post{
+    .post-header{
+        padding:22px 30px 11px;
+    }
+    .post-footer{
+        padding:8px 30px 22px;
+    }
+    .post-text{
+        padding-left:30px;
+        padding-right:30px;
+    }
+    .post-media{
+        padding:20px 0 8px;
+       > a{
+            display:block;
+        }
+    }
+    .post-video{
+        margin:20px 0 8px;
+    }
+}
+.bookmarked{
+    &:before{
+        content:"\e91d";
+        position:absolute;
+        right:50px;
+        top:-4px;
+        font-family:'gg-iconset' !important;
+        font-size: 20px;
+        color:$gg-primary-color;
+    }
+}
+
+
+
+
+.user-location-form .select2-container--default .select2-selection--multiple{
+    min-height:auto!important;
+    height:34px!important;
+}
+.user-location-form .select2-selection__choice{
+    background: $gg-light!important;
+    border: 1px solid $gg-light!important;
+    margin-top:5px!important;
+    .select2-selection__choice__remove{
+        display:none;
+    }
+}
+.select2-search__field{
+    padding-top:0!important;
+}

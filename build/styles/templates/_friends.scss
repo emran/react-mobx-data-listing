@@ -1,0 +1,498 @@
+//Banner header
+
+.section-banner{
+    position:relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 0;
+
+    >img{
+        width:100%;
+        min-height:100%;
+    }
+
+    .upload-timeline-img{
+        position:absolute;
+        top:0;
+        right:100px;
+        width:40px;
+        height:44px;
+        padding-top:15px;
+        @include radius(0 0 20px 20px);
+        @include rgba-opacity($gg-gray-darker, 0.4);
+        color:$gg-light-gray;
+        text-align:center;
+
+        &:hover{
+            @include rgba-opacity($gg-gray-darker, 0.7);
+        }
+    }
+}
+
+
+//Friends
+
+.section-secondary-nav{
+    margin-bottom: 35px;
+}
+
+.profile-person{
+    display:inline-block;
+    padding-left: 158px;
+    position:relative;
+    bottom:-10px;
+    min-width:380px;
+    @extend .d-inline;
+
+
+
+
+    .title{
+        margin-left: 20px;
+
+        h4, h4 a{
+            color:$title-color;
+            margin: 0 0 5px;
+            font-size:18px;
+        }
+
+        h6{
+            color:$text-color-dim;
+        }
+    }
+
+    &.profile-other{
+        .title{
+            margin-left:5px;
+        }
+    }
+
+    @media only screen and (max-width:1200px){
+        &.profile-other{
+            width:100%;
+        }
+
+        .profile-nav{
+            margin-left: 150px
+        }
+    }
+
+}
+
+.profile-pic{
+        position:absolute;
+        left:15px;
+        bottom: 7px;
+    a{
+        display:block;
+        img{
+            width:118px;
+            height:118px;
+            border-width:9px;
+            box-sizing:content-box;
+        }
+    }
+
+    [class^="avatar"]{
+        border-width:9px;
+    }
+
+    .upload-pic-link{
+        position:absolute;
+        right:-15px;
+        top:0;
+        display:block;
+        width:40px;
+        height:40px;
+        line-height:40px;
+        color:$gg-light;
+        text-align:center;
+        line-height:40px;
+        @include radius(50%);
+        font-size:14px;
+    }
+
+}
+
+.profile-nav{
+    display:inline-block;
+    >ul{
+        >li{
+            display:inline-block;
+            >a{
+                color:$title-color;
+                text-transform:uppercase;
+                font-family:$nav-link-font;
+                font-size:$nav-link-font-size;
+                display:block;
+                padding:30px 12px 28px;
+                position:relative;
+
+                &.active{
+                    color:$gg-primary-color;
+
+                    &:before{
+                    position:absolute;
+                    top:100%;
+                    left:50%;
+                    margin-left:-8px;
+                    margin-top:-1px;
+                    content:"";
+                    border-top:8px solid $gg-light;
+                    border-right:8px solid transparent;
+                    border-left:8px solid transparent;
+
+                    }
+                }
+
+            }
+
+            .dropdown-menu{
+                margin:0;
+                @include radius(0 0 3px 3px);
+                left:-5px;
+            }
+        }
+    }
+
+     @media only screen and (max-width:1200px){
+
+            margin-left: 150px
+
+    }
+}
+
+
+
+.profile-tools-nav{
+    display:inline-block;
+    float:right;
+    padding-top:20px;
+
+    >ul{
+        >li{
+            display:inline-block;
+            margin-left:5px;
+            &:first-child{
+                margin-left:0;
+            }
+
+        }
+    }
+}
+
+
+
+.profile-header-wrapper{
+    &.large-name{
+        .profile-person{
+            width:100%;
+            clear:both;
+            padding-top:10px;
+        }
+        .profile-other + .profile-nav{
+            margin-left:150px;
+        }
+        .profile-nav{
+            margin-left:165px;
+
+            > ul > li > a{
+               padding:20px 12px;
+            }
+        }
+        .profile-tools-nav{
+            padding-top:7px;
+        }
+    }
+
+    @media only screen and (max-width: 1200px){
+        .profile-person{
+            padding-top:10px;
+        }
+        .profile-nav > ul > li > a{
+            padding:20px 12px;
+        }
+        .profile-tools-nav{
+            padding-top:7px;
+        }
+    }
+}
+
+
+//panel box
+
+.panel-box{
+    background:$gg-light;
+    @include box-shadow(0px 0px 3px 0px $post-box-shadow);
+    @include radius(3px);
+
+    .panel-header-top{
+        padding:30px 30px 0;
+        a{
+            color:$title-color;
+            font-size:11px;
+            i{
+                font-size:9px;
+                padding-right:10px;
+            }
+        }
+        +.panel-header{
+            padding-top:20px;
+        }
+    }
+
+    .panel-header{
+        @extend .d-table;
+        padding: 30px 30px 10px;
+
+        .panel-tools{
+            @extend .d-inline;
+            text-align:right;
+
+            >:nth-child(n+1){
+                margin-left: 4px;
+                vertical-align: top;
+            }
+            >.dropdown{
+                top:-1px;
+            }
+        }
+
+        .search-area{
+            i{
+                top:13px;
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .panel-navbar{
+        padding:0 30px 18px;
+    }
+}
+
+
+.search-area{
+    position:relative;
+    input{
+        padding: 0 30px 0 10px;
+    }
+    >i{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+.search-header{
+    margin-bottom:18px;
+    p{
+        font-size: 12px;
+        margin:0;
+
+        span{
+            font-weight: 700;
+            text-transform:capitalize;
+        }
+    }
+}
+
+
+
+.user-list-block,
+.circle-list-block {
+    padding:12px 30px 0;
+}
+
+.user-list,
+.circle-list {
+    clear:both;
+}
+.user-item,
+.circle-item {
+    @extend .d-table;
+    &:not(:last-child){
+        margin-bottom:28px;
+    }
+
+    .avatar{
+        width: 96px;
+    }
+    .user-details,
+    .circle-details {
+        vertical-align:middle;
+        p{
+            margin:0;
+            font-size:12px;
+            line-height:22px;
+        }
+    }
+    .tool-box{
+
+        text-align:right;
+
+        >:nth-child(n+1){
+            display:inline-block;
+        }
+    }
+}
+
+// Circles
+.circle-item {
+    .dot-v-dropdown {
+        vertical-align: middle;
+    }
+}
+.circle-members {
+    vertical-align: middle;
+    ul {
+        li {
+            position: relative;
+            float: left;
+            &:nth-child(1) {
+                z-index: 4;
+                right: -52px;
+                &:hover {
+                    z-index: 9;
+                }
+            }
+            &:nth-child(2) {
+                z-index: 3;
+                right: -39px;
+                &:hover {
+                    z-index: 9;
+                }
+            }
+            &:nth-child(3) {
+                z-index: 2;
+                right: -26px;
+                &:hover {
+                    z-index: 9;
+                }
+            }
+            &:nth-child(4) {
+                z-index: 1;
+                right: -13px;
+                &:hover {
+                    z-index: 9;
+                }
+            }
+            &:nth-child(5) {
+                z-index: 0;
+                right: 0;
+                &:hover {
+                    z-index: 9;
+                }
+            }
+            a {
+                display: block;
+                img {
+                    @include size(30px,30px);
+                    border: 1px solid $gg-gray;
+                    border-radius: 50%;
+                }
+            }
+            &.more-members {
+                a {
+                    color: $gg-gray-darker;
+                    font-size: 14px;
+                    line-height: 30px;
+                    padding-left: 6px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.content-loading{
+    text-align:center;
+    padding:35px 0 25px;
+    color:$text-color;
+    font-size:28px;
+}
+
+
+
+
+//Request promo box
+
+.promo-panel{
+    @extend .d-inline;
+    text-align:center;
+    margin-bottom:20px;
+    padding:15px 10px;
+  
+    .profile-img{
+        margin-right:15px;
+    }
+    p{
+        margin:0;
+        position:relative;
+        bottom:-3px;
+        a{
+            font-weight:600;
+            color:$title-color;
+        }
+    }
+    .panel-tools{
+        margin-left:20px;
+    }
+}
+.promo-panel-cell{
+    margin-bottom:20px;
+    padding:15px 15px 15px 25px;
+    @extend .d-table;
+    .profile-img{
+        margin-right:15px;
+        float:left;
+        vertical-align: middle;
+        position:relative;
+        z-index:1;
+        a{
+            display: block;
+        }
+    }
+    .details{
+        padding-top:5px;
+        p{
+            margin:0;
+        }
+    }
+    .panel-tools{
+        text-align: right;
+        vertical-align: middle;
+    }
+    
+}
+
+// Friends Modal CSS
+.user-list-modal {
+    
+    .modal-dialog {
+        max-height: 550px;
+        .modal-body {
+            max-height: 453px;
+            overflow-y: auto;
+        }
+    }
+    .tool-box {
+        .dropdown-menu {
+            right: 0;
+            left: auto;
+        }
+    }
+    .search-user{
+        margin-bottom:10px;
+    }
+}
+.eng-modal.suggest-frnd-modal{
+    .modal-body{
+        background: $gg-light;
+    }
+    .disabled{
+        @include opacity(1);
+    }
+}
+

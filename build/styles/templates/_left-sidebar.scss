@@ -1,0 +1,282 @@
+//Left sidebar 
+
+.sidebar-panel{
+   
+}
+
+//navigation
+
+.navigation{
+    >ul{
+        >li,.more-sidebar-items >li{
+            >a{
+                font-family: $sidenav-link-font;
+                font-size: $sidenav-link-font-size;
+                color: $sidenav-link-color;
+                text-transform:uppercase;
+                padding: 10px;
+                display:block;
+                
+                >i{
+                    padding-right: 7px;
+                    font-size: 16px;
+                    vertical-align: middle;
+                    position:relative;
+                    top:-1px;
+                }
+                
+                &.news-feed{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.nav-gray-bg{
+    >ul{
+        >li,.more-sidebar-items >li{
+            >a{
+                
+                &:hover{
+                    background: $nav-link-hover-bg-light;
+                    @extend .shadow;
+                    @include radius(3px);
+                }
+            }
+            &.open{
+                >a{
+                    background: $nav-link-hover-bg-light;
+                    @extend .shadow;
+                    @include radius(3px);
+                }
+            }
+
+        }
+    }
+}
+.nav-light-bg{
+    >ul{
+        >li,.more-sidebar-items >li{
+            >a{
+                
+                &:hover{
+                    background: $nav-link-hover-bg-gray;
+                    @extend .shadow;
+                    @include radius(3px);
+                }
+            }
+            &.open{
+                >a{
+                    background: $nav-link-hover-bg-gray;
+                    @extend .shadow;
+                    @include radius(3px);
+                }
+            }
+        }
+    }
+}
+
+
+.nav-color-icon{
+    >ul{
+        >li,.more-sidebar-items >li{
+            >a{
+                >i{
+                    &.gg-feed{
+                        color: $nav-news-feed;
+                    } 
+                    &.gg-user{
+                        color: $nav-profile;
+                    } 
+                    &[class^="gg-chat"]{
+                        color: $nav-message;
+                    } 
+                    &.gg-group{
+                        color: $nav-friends;
+                    } 
+                    &.gg-bell{
+                        color: $nav-notification;
+                    } 
+                    &.gg-image{
+                        color: $nav-photo;
+                    }
+                    &.gg-event{
+                        color: $nav-event;
+                    }
+                    &.gg-save{
+                        color: $nav-save;
+                    }
+                    &.gg-circle{
+                        color: $nav-circle;
+                    }
+                    &.gg-clock{
+                        color: $nav-friends;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+//left popup header
+
+.left-popup-header {
+    padding:5px 15px;
+    border-bottom: 1px solid $gg-light-gray-darker;
+
+  .title  {
+    display: inline-block;
+    width: 100%;
+    line-height: 15px;
+    margin-bottom:7px;
+    h5 {
+      float: left;
+      margin-bottom:0px;
+      text-transform: uppercase;
+      font: {
+        family: $montserrat;
+        size: $gg-base-font-size - 2;
+      }
+    }
+
+    .action{
+        position:relative;
+        float: right;
+        font-size: $gg-base-font-size - 1;
+        margin:0;
+        text-align:right;
+      a {
+        color: $gg-gray;
+        &:hover {
+          color: $gg-gray-darker;
+        }
+      }
+    }
+  }
+
+  .sub-title {
+    @extend .title;
+
+    .status {
+      //float: left;
+        display:inline-block;
+      color: $gg-gray;
+      font-size: $gg-base-font-size - 1;
+    }
+
+  }
+}
+
+
+.notification-list {
+    border-bottom: 1px solid $gg-light-gray-darker;
+    position: relative;
+
+    .thumb {
+      float: left;
+      margin-right: 15px;
+      img {
+        width: 50px;
+        height: 50px;
+        @include radius(50%);
+      }
+    }
+
+    .notification-info {
+        display: inline-block;
+        width: 80%;
+        h5 {
+          margin: 8px 0 5px 0;
+          span {
+            white-space: normal;
+            color: $gg-gray;
+            font-size: $gg-base-font-size - 2;
+            i {
+              padding-right: 5px;
+            }
+          }
+
+        }
+
+        p{
+          margin-bottom: 0;
+          color: $gg-gray;
+          font-size: $gg-base-font-size - 2;
+        }
+    }
+
+    .off-line {
+      i {
+       
+        position: absolute;
+        top: 3px;
+        right: 0px;
+        background: $gg-gray;
+        border:1px solid $gg-light;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    .on-line {
+      i {
+          
+        position: absolute;
+        top: 3px;
+        right: 0px;
+        background: $gg-aqua;
+        border:1px solid $gg-light;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+    }
+
+}
+
+
+.no-notification {
+    padding: 30px 0;
+    .msg {
+      margin-top: 20px;
+      display: block;
+    }
+
+    .notification-setting {
+      margin: 40px 0;
+      a {
+        padding: 2px 30px !important;
+      }
+    }
+}
+
+.fnd-req-action {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  a {
+    
+
+  }
+}
+
+
+
+.left-nav-more{
+    padding:5px 8px;
+    display:block;
+    font-family: $gg-accent-font;
+    font-size: 11px;
+    color:$text-color;
+    font-weight:700;
+    cursor:pointer;
+    
+}
+
+.side-nav-list > .dropdown {
+  display: block;
+}

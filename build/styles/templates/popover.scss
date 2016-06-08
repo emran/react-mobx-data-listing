@@ -1,0 +1,109 @@
+/*
+ * popover css
+ */
+ .popover {
+     @include box-shadow(0 0 5px $gg-shadow);
+     width: 310px;
+     max-width: none;
+     &.bottom {
+         border: none;
+     }
+     > .arrow {
+         border: none;
+         &:after {
+             margin-left: 0;
+         }
+     }
+
+
+ }
+.popover-body, .popover-content {
+    border-width: 0;
+    padding: 10px 15px;
+    .arrow{
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 9px;
+            width: 10px;
+            height: 20px;
+            background: #fff;
+            display: block;
+            -webkit-box-shadow: -3px -2px 5px 0px rgba(178, 178, 178, 0.1);
+            -moz-box-shadow: -3px -2px 5px 0px rgba(178, 178, 178, 0.1);
+            -ms-box-shadow: -3px -2px 5px 0px rgba(178, 178, 178, 0.1);
+            box-shadow: -3px -2px 5px 0px rgba(178, 178, 178, 0.1);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+    }
+    .popover-header {
+        border-bottom: 1px solid $gg-light-gray;
+        padding-bottom: 15px;
+        .title {
+            color: $gg-black;
+            font-size: 18px;
+            font-weight: 400;
+            float: left;
+            background: transparent;
+            border-width: 0;
+            padding: 0;
+            span {
+                color: $gg-core-red;
+            }
+        }
+        .popover-close {
+            float: right;
+            font-size: 11px;
+            color: $gg-gray-darker;
+            margin-top: 2px;
+            border: 0;
+            background: transparent;
+            &:hover {
+                color: $gg-black;
+            }
+        }
+    }
+    .popover-body {
+        padding: 20px 0;
+        p {
+            color: $gg-black;
+            font-size: 12px;
+            line-height: 19px;
+        }
+    }
+    .popover-footer {
+
+        padding: 5px 0;
+        padding-left: 0 !important;
+
+        .s-w{
+
+        }
+
+        .done-btn{
+            display: none;
+        }
+        .next-btn{
+            &.disabled{
+                display: none;
+
+                +.done-btn{
+                    display: block;
+                    float: left;
+                }
+            }
+
+        }
+    }
+}
+.popover.right > .arrow:after{
+    box-shadow: none !important;
+    width: 20px;
+    height: 20px;
+}

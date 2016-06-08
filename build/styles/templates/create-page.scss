@@ -1,0 +1,295 @@
+/*
+|-------------------------------------
+| Create Page CSS
+|-------------------------------------
+ */
+
+// Modal Deafult CSS
+.eng-modal {
+    .modal-content {
+        border-radius: 0;
+    }
+    .modal-header {
+        border-bottom: 1px solid $border-color;
+        .title {
+            font-size: 16px;
+            color: $gg-black;
+            text-transform: capitalize;
+        }
+    }
+    .modal-body {
+        padding: 25px 15px;
+    }
+    .modal-body,
+    .modal-footer {
+        background-color: $gg-light-gray;
+    }
+    
+    .user-item{
+        .avatar{
+            width:65px;
+        }
+        .user-details{
+            padding-top:5px;
+        }
+    }
+    .user-list-block, 
+    .circle-list-block{
+        padding:0 20px;    
+    }
+    
+}
+
+.eng-modal.c-page-modal {
+    .modal-dialog {
+        width: 1000px;
+    }
+}
+
+.create-page-intro {
+    h3 {
+        font-size: 18px;
+        font-weight: 400;
+        color: $gg-gray-darker;
+        text-align: center;
+        line-height: 28px;
+        span {
+            font-weight: 700;
+            color: $gg-core-red;
+        }
+    }
+}
+
+.gg-platforms {
+    ul {
+        text-align: center;
+        margin-top: 12px;
+        li {
+            display: inline;
+            a {
+                display: inline-block;
+                @include size(22px,22px);
+                background-color: gray;
+                border-radius: 50%;
+                color: $gg-light;
+                line-height: 21px;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+            &.engage {
+                a {
+                    background-color: $gg-core-red;
+                }
+            }
+            &.logic {
+                a {
+                    background-color: $gg-core-turquoise;
+                }
+            }
+            &.market {
+                a {
+                    background-color: $gg-core-purple;
+                }
+            }
+            &.jobs {
+                a {
+                    background-color: $gg-core-violet;
+                }
+            }
+            &.gagagugu {
+
+            }
+        }
+    }
+}
+
+.create-page-form {
+     padding: 65px 0;
+
+     .form-group {
+         margin-bottom: 10px;
+     }
+     input,
+     textarea,
+     select {
+         background-color: $gg-light;
+     }
+     select {
+         padding-left: 8px;
+         padding-right: 8px;
+     }
+     button {
+         display: block;
+         margin: auto;
+         margin-top: 15px;
+     }
+     input:focus,
+     input:active,
+     textarea:focus,
+     textarea:active,
+     select:focus,
+     select:active {
+         background-color: $gg-light;
+     }
+
+    .page-primary-info {
+//        margin-left:25%;
+//         @include transition(all 5.6s ease);
+//        transition: cubic-bezier(.17,.67,.83,.97);
+        .anim-primary-box{
+            @include translate(50% ,0);
+            @include transition(all .6s ease);
+            z-index:2;
+            position:relative;
+        }
+
+        .profile-person {
+            bottom: inherit;
+            padding-left: 0;
+            height: 136px;
+            width:100%;
+            margin-bottom: 5px;
+            .profile-pic {
+                left: 50%;
+                margin-left: -68px;
+            }
+        }
+        input,
+        select {
+            display: block;
+            margin: auto;
+            width: 280px;
+        }
+        select {
+            margin-bottom: 10px;
+        }
+    }
+
+    .page-secondary-info {
+        position:relative;
+//        left:50%;
+//        height:0px;
+//        width:0;
+        overflow:hidden;
+        .anim-secondary-box{
+            @include translate(110% ,0);
+            @include transition(all .6s ease);
+            -webkit-transition-delay:.1s;
+            -moz-transition-delay:.1s;
+            -ms-transition-delay:.1s;
+            transition-delay:.1s;
+        }
+        label {
+            width: 120px;
+            float: left;
+            font-size: 13px;
+            font-weight: 400;
+            color: $gg-gray-darker;
+            margin-top: 5px;
+        }
+        .form-control {
+            width: 300px;
+        }
+
+//        &:before{
+//            position:absolute;
+//            content:"";
+//            width:1px;
+//            height:0px;
+//            background: $border-color;
+//            right:0;
+//            top:0;
+//        }
+    }
+ 
+}
+.eng-create-page{
+    button[type="submit"] {
+        @include translate(0 ,100%);
+        @include opacity(0.5);
+        -webkit-transition-delay:.6s;
+        -moz-transition-delay:.6s;
+        -ms-transition-delay:.6s;
+        -o-transition-delay:.6s;
+        transition-delay:.6s;
+    }
+}
+.create-page-form-details{
+    .page-primary-info{
+        @include transition(all .8s ease);
+        margin-left:0;
+        .anim-primary-box{
+            @include translate(0 ,0);
+        }
+        &:before{
+            position:absolute;
+            content:"";
+            width:1px;
+            height:0;
+            background: $border-color;
+            right:45px;
+            margin-top:40px;
+            top:50%;
+            @include translate(0%, -50%);
+            -webkit-animation: height-anm .2s linear;
+            -moz-animation: height-anm .2s linear;
+            -ms-animation: height-anm .2s linear;
+            -o-animation: height-anm .2s linear;
+            animation: height-anm .2s linear;
+            -webkit-animation-delay:1s;
+            -webkit-animation-delay:1s;
+            -webkit-animation-delay:1s;
+            -webkit-animation-delay:1s;
+            -webkit-animation-fill-mode:forwards;
+            -moz-animation-fill-mode:forwards;
+            -ms-animation-fill-mode:forwards;
+            -o-animation-fill-mode:forwards;
+            animation-fill-mode:forwards;
+        }
+
+    }
+    .page-secondary-info {
+        .anim-secondary-box{
+            @include translate(0 ,0);
+        }
+////        left:8.33%;
+////        height:auto;
+////        width:inherit;
+//        .anim-box{
+//            @include translate(100%,0);
+//            animation : form-up .3s linear;
+//            animation-delay: .2s;
+//            animation-fill-mode:forwards;
+//        }
+    }
+    button[type="submit"] {
+        @include translate(0 ,0);
+        @include opacity(1);
+    }
+}
+
+
+
+@keyframes form-up{
+    0%{
+        @include opacity(0);
+        @include translate(100%, 0);
+
+    }
+    100%{
+         @include opacity(1);
+        @include translate(0, 0%);
+    }
+}
+
+//Animation before
+@keyframes height-anm{
+    0%{
+       height:0;
+
+    }
+    100%{
+        height:290px;
+    }
+}

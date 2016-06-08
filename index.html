@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Logic</title>
+
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+
+    <link href='assets/styles/main.min.css' rel='stylesheet' type='text/css'>
+    <link href='assets/styles/logic.css' rel='stylesheet' type='text/css'>
+
+    <!--if lt IE 9
+   script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+   script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+   -->
+
+
+ </head>
+<body>
+<!-- Main Default gg-layout-wrapper -->
+<div class="lg-layout-wrapper">
+    <!-- Header -->
+    <header class="main-header">
+        <!-- Navigation start-->
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <!--gg logo start-->
+                    <div class="gg-logo">
+                        <a href="#">
+                            <img src="assets/images/gg-logo.png" alt="">
+                        </a>
+                    </div>
+                    <!--gg logo end-->
+
+                    <!--nav start-->
+                    <nav class="logic-nav">
+                        <ul>
+                            <li class="dropdown dropdown-arrow">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="gg-ellipsis-h"></i></a>
+
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="survey-in-sub-nav" style="display: none;"><a href="#">survey</a></li>
+                                    <li>
+                                        <a href="#" class=" ">
+                                            Opinion
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=" ">
+                                            Event
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class=" ">
+                                            Others
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--nav end-->
+
+
+                    <!--logic logo start-->
+                    <div class="logic-logo">
+                        <a href="">
+                            <img src="assets/images/logo.png" alt="Engage logo" />
+                        </a>
+                    </div>
+                    <!--logic logo end-->
+
+                    <!--user info and notification start -->
+                    <div class="user-info">
+
+                        <!--header search form start -->
+                        <form class="search-form" action="">
+                            <div class="search-area">
+                                <input class="input-search" type="text" placeholder="Search">
+                                <button><i class="gg-search"></i></button>
+                            </div>
+                        </form>
+                        <!--header search form end -->
+
+                    </div>
+                    <!--user info and notification end -->
+                </div>
+
+            </div>
+        </div>
+        <!--navigation end -->
+    </header>
+    <!-- Header end -->
+<!-- Header end -->
+
+<!-- main-container -->
+<div class="lg-section-container">
+
+    <section class="banner event-banner poll" style="background-image: url('assets/images/post-thumb-3.jpg');">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <div class="banner-wrapper">
+
+                        <div class="banner-content">
+
+                            <div class="banner-content-left pull-left">
+                                <div class="event-icon icon-poll">
+                                    <i class="gg-poll2"></i>
+                                </div>
+                                <div class="event-intro">
+                                    <h1 class="title">Poll</h1>
+                                    <p class="des">Total 2930 polls are available.</p>
+                                </div>
+                            </div> <!-- banner-content-left -->
+
+                            <div class="banner-content-right pull-right">
+                                <a href="" class="btn btn-purple">create new poll</a>
+                            </div> <!-- banner-content-right -->
+                        </div> <!-- banner-content -->
+                    </div> <!-- banner-wrapper -->
+
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+
+    </section>
+    <!-- event-banner -->
+    <div id="poll-list"></div>
+    <!-- filter-bar -->
+
+</div>
+<!-- section-container End -->
+    <script>
+        var profileId = '153';
+        var relativeId = 'u1';
+        var token =  'QdxXS4HwLEFKkeAvCybiiABNIlWS9L8dQiZzmLoM' ;
+        var GGLogicEndpoints = {
+            pollPublicListAPI: 'http://gg-logic-v2.dev/api/v1/public/polls'
+        }
+    </script>
+<script src="files/jquery.min.js"></script>
+<!--<script src="web/js/vendors.js"></script>-->
+<!--<script src="web/js/bundle.js"></script>-->
+<script src="static/bundle.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12"></div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+    </footer>
+    <!-- Footer end -->
+</div>
+<!-- Main gg-layout-wrapper end -->
+
+<!-- //JS resourses// -->
+
+<script src="assets/scripts/plugins.min.js"></script>
+<script src="assets/scripts/scripts.min.js"></script>
+<script src="assets/scripts/logic.js"></script>
+<script src="assets/scripts/common.js"></script>
+</body>
+</html>

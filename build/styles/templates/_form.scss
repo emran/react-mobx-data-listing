@@ -1,0 +1,63 @@
+/* form element */
+
+input.form-control,
+input[type="color"],
+select{
+	height:36px;
+}
+
+input[type="checkbox"],
+input[type="radio"].form-control{
+	//height:18px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+.form-control,
+select,
+textarea{
+	background:$form-bg;
+    border-color: $border-color;
+    height: $form-height-default;
+	@include radius(3px);
+    @include box-shadow(none);
+	
+	&:focus{
+		background:$form-bg;
+        border-color: $border-color;
+        @include box-shadow(none);
+        outline: 0;
+	}
+}
+
+
+//Bootstrap form element
+.form-group{
+    label{
+        margin-bottom:10px;
+    }
+}
+textarea{
+    resize:vertical;
+}
+
+
+//Validation Error 
+.has-error {
+    .form-control,
+    .form-control:focus{
+        border-color:$gg-primary-color;
+        @include box-shadow(none);
+    }
+}

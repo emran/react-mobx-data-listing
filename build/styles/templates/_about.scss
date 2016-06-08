@@ -1,0 +1,480 @@
+/*
+|---------------------------------------------
+| About CSS
+|---------------------------------------------
+*/
+.panel-wrapper {
+    .tab-content {
+        padding-bottom:40px;
+    }
+}
+.single-panel {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    >.panel-heading{
+        background-color: $gg-light-gray;
+    }
+}
+.panel-intro {
+    border: none;
+    padding: 10px 30px;
+
+    h4 {
+        text-transform: capitalize;
+    }
+
+    a {
+        color: $gg-blue-darker;
+        i {
+            margin-right: 3px;
+        }
+        &:hover,
+        &:focus {
+            color: $gg-blue-darker;
+        }
+    }
+}
+
+.panel-details {
+    padding: 20px 30px;
+}
+
+.panel-info {
+    margin-bottom: 12px;
+    .info-label {
+        width: 150px;
+        margin-right: 10px;
+        p {
+            color: $gg-black;
+            margin-bottom: 0;
+        }
+    }
+    .info-des {
+        overflow:hidden;
+        p {
+            color: $gg-black;
+            margin-bottom: 0;
+        }
+        ul {
+            li {
+                a {
+                    color: $gg-blue-darker;
+                    font-weight: 600;
+                    &:hover,
+                    &:focus {
+                        color: $gg-blue-darker;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+//personal-info-block
+
+.post-privacy{
+    [data-toggle="dropdown"] > i{
+        color:$gg-black-darker;
+    }
+}
+
+
+.personal-info-block{
+    padding:0 30px;
+    >:nth-child(n+1){
+        margin-bottom:37px;
+    }
+}
+
+.personal-info-tab-block{
+    margin-top:12px ;
+}
+.personal-info-overview-block{
+    margin-top:43px;
+}
+
+.personal-info-panel{
+    @extend .d-table;
+    .avatar{
+        width:67px;
+        height:67px;
+       
+        >a{
+             border:1px solid $border-color;
+             display: block;
+        }
+
+        img{
+            
+            
+        }
+        //float:left;
+    }
+    .content{
+        //float:left;
+        padding-top:2px;
+        padding-left:20px;
+        vertical-align: top;
+
+        p{
+            margin-bottom:3px;
+            line-height:20px;
+        }
+        h4{
+            font-size:14px;
+            line-height:20px;
+            font-weight:700;
+        }
+        h6{
+            color:$text-color-dim;
+            font-family:$gg-base-font;
+            font-size:11px;
+        }
+        .tag-list{
+            margin-top:6px;
+        }
+
+        .profile-link{
+            font-weight:600;
+        }
+    }
+    .tools{
+        vertical-align: top;
+        padding-top:4px;
+        text-align:right;
+        width:61px;
+
+        >.post-meta{
+            width:60px;
+            display:inline-block;
+
+            >:nth-child(n+1){
+                display:inline-block;
+                padding-left:10px;
+            }
+
+            .post-privacy{
+                .dropdown-menu{
+                    right:-8px;
+                }
+            }
+        }
+
+        .dot-v-dropdown{
+            .dropdown-menu{
+                right:-13px;
+            }
+        }
+    }
+}
+
+
+.interest-tag-panel{
+    .tag-list{
+        >li{
+            display:block;
+            float:left;
+
+            margin:0 4px 10px 0;
+            position: relative;
+
+            &:hover{
+                .remove-item{
+                    display: block;
+                }
+            }
+
+            >a{
+                display:block;
+                padding:4px 12px;
+                border:1px solid $btn-border;
+                font-size:12px;
+                color:$btn-color;
+                font-family:$gg-accent-font;
+                text-transform: capitalize;
+                @include radius(3px);
+
+                &:hover{
+                    background:$btn-default-bg;
+                }
+            }
+            >.remove-item{
+                background: $gg-red;
+                color: $gg-light;
+                height: 14px;
+                width: 14px;
+                position: absolute;
+                top: -4px;
+                right: -4px;
+                z-index: 9;
+                border-radius: 10px;
+                font-size: 12px;
+                line-height: 12px;
+                padding: 0;
+                text-align: center;
+                cursor: pointer;
+                display: none;
+            }
+
+            >.btn-add-interest {
+                line-height: 25px;
+                padding: 0 7px;
+                margin: 0 0 0 3px;
+            }
+        }
+    }
+}
+
+.form-interest{
+    margin-left:117px;
+    margin-bottom:46px;
+    width:437px;
+    padding-right:92px;
+    position:relative;
+    &.form-interest-tag{
+        margin: 0;
+        width: 100%;
+    }
+    button[type="submit"]{
+        position:absolute;
+        right:0;
+        top:0;
+    }
+
+    .form-control{
+        background:$gg-light;
+    }
+
+    .select2-container{
+        width:100% !important;
+        .select2-selection--single{
+            height:34px;
+            border:1px solid $border-color;
+            outline:0;
+            .select2-selection__rendered{
+                line-height:32px;
+            }
+            .select2-selection__arrow{
+                top:4px;
+                display:none;
+            }
+        }
+        .select2-selection--multiple{
+            height:auto;
+            min-height:34px;
+            @include radius(3px);
+            border: 1px solid $border-color;
+        }
+        .select2-search--inline .select2-search__field{
+            margin:0;
+        }
+        .select2-search__field{
+            height:27px;
+        }
+    }
+    .select2-selection{
+        //        display:none;
+
+    }
+}
+.select2-dropdown{
+    border:1px solid $border-color;
+}
+.form-interest-tag{
+    display: none;
+}
+
+
+// Works Section
+.company-logo {
+    img {
+        border:1px solid $border-color;
+    }
+}
+.panel-left-bar {
+    margin-right:20px;
+    width: 90px;
+}
+.panel-right-bar {
+    width: 365px;
+    position:relative;
+    .input-group {
+        width: 100%;
+    }
+}
+
+.search-result {
+    border-color:$border-color;
+    border-width:0 1px 1px 1px;
+    border-style:solid;
+    padding:20px 15px;
+    position: absolute;
+    width: 100%;
+    background:$gg-light;
+    z-index: 999;
+    p {
+        color:$gg-black-darker;
+        line-height: 1.2;
+
+    }
+}
+.abt-works-section ,.abt-education-section{
+    .block {
+        textarea.form-control {
+            background:transparent;
+            border-radius:0;
+        }
+        margin-bottom:30px;
+        .label {
+            color:$gg-black-darker;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: 10px;
+            margin-bottom: 0;
+            padding:0;
+        }
+        input,textarea {
+            background:$gg-light;
+            &:focus {
+                background:$gg-light-gray;
+            }
+        }
+        select {
+            width: 80px;
+            height: 30px;
+            padding: 5px;
+            font-size: 11px;
+            line-height: 1;
+            border: 1px solid $border-color;
+            border-radius: 0;
+            display:inline-block;
+            margin-right: 7px;
+        }
+        .time-period {
+            .checkbox-inline {
+                margin-top: 25px;
+            }
+            .time-period-from {
+                margin-bottom: 18px;
+            }
+            .time-period-to {
+                opacity: .5;
+            }
+        }
+    }
+}
+
+.submit-buttons {
+    text-align: right;
+    .dropdown {
+        display:inline-block;
+        background:transparent;
+        border:none;
+    }
+    .btn-dropdown-transparent {
+        background:transparent;
+        border:transparent;
+        i {
+            color:$gg-black-darker;
+        }
+        .caret {
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+    }
+    .btn-dropdown-transparent:focus, .btn-dropdown-transparent:active, .btn-dropdown-transparent.active:focus, .btn-dropdown-transparent:active:hover {
+        border:transparent;
+        background:transparent;
+    }
+
+    button {
+        margin-right: 7px;
+    }
+}
+
+
+
+.work-list {
+    margin-top: 40px;
+    a {
+        color:$gg-blue;
+        &:hover {
+            color:$gg-blue-darker;
+        }
+    }
+    .media{
+        overflow:visible!important;
+        padding:0 27px;
+        margin-bottom:40px;
+        .media-heading {
+            color:$gg-gray-darker;
+        }
+        .pull-left {
+            padding-right: 20px;
+        }
+        .media-left, .media-right, .media-body {
+            float: left;
+            display:inline-block;
+            width: auto;
+        }
+        .media-body {
+            padding-top: 8px;
+            width: 460px;
+            p {
+                font-size:11px;
+                line-height:1;
+            }
+        }
+        .media-right {
+            float:right;
+            margin-top: 5px;
+            .btn-transparent i{
+                color:$gg-gray-darker;
+            }
+            .dropdown {
+                display:inline-block;
+            }
+        }
+    }
+}
+.sub-section-title{
+    background-color: $gg-light-gray;
+    border: none;
+    padding: 10px 30px;
+    h4 {
+        display:inline-block;
+        font-weight: bold;
+        i {
+            margin-right:15px;
+        }
+    }
+    a {
+        color:$gg-blue;
+        &:hover {
+            color:$gg-blue-darker;
+        }
+
+        [class^="gg-plus"]{
+            width:17px;
+            height:17px;
+            border:1px solid $gg-blue;
+            @include radius(50%);
+        }
+    }
+}
+
+.work-edit-view {
+    padding-bottom:35px;
+    margin-bottom:28px;
+    border-bottom:1px solid $border-color;
+}
+.panel-settings-button {
+    .btn-default {
+        font-size: 14px;
+        padding:0px 10px;
+    }
+}

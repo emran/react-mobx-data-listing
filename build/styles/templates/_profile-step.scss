@@ -1,0 +1,239 @@
+//Profile step panel
+
+.profile-create-panel{
+    padding: 30px 50px;
+}
+.navigation-profile-step{
+    >ul{
+        >li{
+            width:25%;
+            margin:0;
+            float:left;
+            min-height:94px;
+            >a{
+                padding-left: 60px!important;
+                color:$gg-light-gray-darker;
+                .step{
+                    position: absolute;
+                    left:10px;
+                    top:24px;
+                    width:28px;
+                    height:28px;
+                    margin-top:5px;
+                    @include radius(50%);
+                    background:$gg-light-gray-darker;
+                    color:$gg-light;
+                    line-height: 28px;
+                    text-align: center;
+                }
+                span{
+                    display:block;
+                    text-transform: capitalize;
+                }
+                .title{
+                    font-size:28px;
+                    font-family: $gg-base-font;
+                    font-weight:300;
+                    text-transform: capitalize;
+                }
+                .sub-title{
+                    height:30px;
+                }
+                &:hover{
+                    color:$gg-light-gray;
+                }
+            }
+            &.active{
+                >a{
+                    &:hover{
+                        color: $gg-primary-color;
+                    }
+                    .step{
+                        background: $gg-primary-color;
+                    }
+                }
+            }
+            &.step-complete{
+                >a{
+                    .step{
+                        text-indent:-99px;
+                        overflow:hidden;
+
+                        &:before{
+                            content:"\e928";
+                            position:absolute;
+                            font-family:"gg-iconset";
+                            text-indent:0px;
+                            left:9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer-panel{
+    text-align:center;
+    padding:40px 0 10px;
+    margin:30px 0 0;
+    border-top:1px solid $border-color;
+
+    .skip-link{
+        float:right;
+        color:$text-color;
+        padding-top:8px;
+    }
+}
+
+.profile-info-area{
+    .header{
+        text-align:center;
+        margin:54px 0 56px;
+    }
+}
+
+.big-heading{
+    font-size: 18px;
+}
+.gagu-title{
+    span{
+        color:$gg-red;
+    }
+}
+.profile-info-form{
+    .form-group{
+        margin-bottom:20px;
+    }
+    label{
+        text-align:right;
+        padding-top:7px;
+        margin:0;
+        font-weight:400;
+    }
+    .form-control{
+        background: $gg-light-gray;
+    }
+}
+
+.step-img{
+    img{
+        width:220px;
+    }
+}
+.step-img-4{
+    img{
+        width:236px;
+    }
+}
+.other-social-links{
+    .panel-list{
+        font-size:0;
+        .panel-item{
+            width:48%;
+            margin-left:2%;
+            margin-bottom:17px;
+            background: $gg-light-gray;
+            border: 1px solid $border-color;
+            @include box-shadow(none);
+            display:block;
+            float:left;
+            &:nth-child(odd){
+                margin-right:2%;
+                margin-left:0;
+            }
+            .avatar{
+                width:36px;
+                height:36px;
+                background-size: 115px;
+                background:url('../../assets/images/social-icons.png') no-repeat;
+            }
+
+            &:nth-child(1){
+                .avatar{
+                    background-size:115px;
+                    background-position: -15px -14px;
+                }
+            }
+            &:nth-child(2){
+                .avatar{
+                    background-size:115px;
+                    background-position: -64px -14px;
+                }
+            }
+            &:nth-child(3){
+                .avatar{
+                    background-size:115px;
+                    background-position: -15px -64px;
+                }
+            }
+            &:nth-child(4){
+                .avatar{
+                    background-size:115px;
+                    background-position: -64px -64px;
+                }
+            }
+            &:nth-child(5){
+                .avatar{
+                    background-size:115px;
+                    background-position: -15px -114px;
+                }
+            }
+            &:nth-child(6){
+                .avatar{
+                    background-size:115px;
+                    background-position: -65px -114px;
+                }
+            }
+        }
+    }
+}
+
+
+.suggest-friend-block{
+    border-top:1px solid $border-color;
+    margin-top:40px;
+    padding-top:10px;
+    .user-list-block{
+        max-width:717px;
+        margin:0 auto;
+    }
+}
+
+
+
+.select2-container--default{
+    .select2-selection--single{
+        border:1px solid $border-color;
+        @include radius(3px);
+        background: $gg-light-gray;
+        height:34px;
+
+        .select2-selection__rendered{
+            line-height: 32px;
+        }
+
+        .select2-selection__arrow{
+            display:none;
+        }
+    }
+}
+
+.school-suggestion-item{
+    .school-image {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+    }
+
+    .school-info{
+        display: inline-block;
+        margin-left: 20px;
+    }
+}
+.school-selected {
+    height: 22px;
+    width: 22px;
+    margin-right: 10px;
+    position: relative;
+    top: -1px;
+}

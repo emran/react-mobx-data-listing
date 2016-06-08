@@ -1,0 +1,681 @@
+.ggl-layout-wrapper{
+    padding-top:83px;
+}
+
+/*header*/
+
+.main-header {
+  text-align: center;
+  .navbar {
+//    min-height: 90px;
+    padding: 23px 0 24px;
+    box-sizing: border-box;
+
+    //@include transition(all 0.3s);
+  }
+
+  .gg-logo {
+    margin-left: 20px;
+    float: left;
+    position:relative;
+
+      .dropdown-menu{
+          &before{
+             left: 15px;
+          }
+      }
+  }
+
+  .engage-logo {
+    position: absolute;
+    left: 50%;
+    @include translate(-50%, 0);
+  }
+
+  .search-area {
+    background:$gg-light-gray;
+    float: left;
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 200px;
+    height: 35px;
+    position: relative;
+    input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      padding: 0 30px 0 10px;
+    }
+    i {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: $gg-gray-darker;
+    }
+  }
+    
+    .header-search-field{
+        .location-list{
+            position:absolute;
+            left:0;
+            padding-bottom:8px;
+            margin:0;
+            min-width:320px;
+            background: $gg-light;
+            >li{
+                >a{
+                    display: block;
+                    text-align: left;
+                }
+            }
+        }
+    }    
+
+
+  .user-area {
+    float: right;
+    margin-right: 15px;
+    ul{
+      margin-top: 10px;
+      li{
+        display: inline-block;
+        margin-left: 25px;
+
+        a{
+          font-size: $gg-base-font-size - 3;
+          color: $gg-gray-darker;
+          text-transform: uppercase;
+          &:hover {
+            color: $gg-black;
+          }
+
+          i {
+            font-size: $gg-base-font-size + 4;
+          }
+        }
+      }
+      .dropdown {
+        a {
+          i {
+            color: $gg-gray-darker;
+          }
+          &:hover i {
+            color: $gg-black;
+          }
+        }
+      }
+    }
+
+    .notification {
+      position: relative;
+      top: 5px;
+      .notification-label {
+        background: $gg-light-gray-darker;
+        font-size: 11px;
+        padding: 1px 5px;
+        @include radius(3px);
+        position: absolute;
+        top: -16px;
+        right: -2px;
+      }
+
+      .dropdown-menu {
+        top: 28px;
+        width: 255px;
+        right: -16px;
+        left: auto;
+      }
+
+      .title {
+        padding: 5px 15px;
+        color: $gg-gray-darker;
+      }
+
+      .privacy-items {
+        margin:10px 0 0;
+        li {
+          display: inline-block;
+          width: 100%;
+          margin: 0;
+          a {
+            padding: 12px 15px;
+            display: block;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            color: $gg-black;
+            border-bottom: 1px solid $gg-light-gray-darker;
+
+            .icon-area {
+              float: left;
+              padding-right: 5px;
+              i {
+                font-size: 25px;
+                color: $gg-gray-darker;
+              }
+            }
+
+            h5 {
+              margin-bottom: 3px;
+              text-transform: uppercase;
+
+              font:{
+                size: $gg-base-font-size - 3;
+                family: $montserrat;
+              }
+            }
+
+            span {
+              color: $gg-gray-darker;
+            }
+
+            font:{
+              size: $gg-base-font-size - 2;
+            }
+            &:hover  {
+              background: $gg-red;
+              border-bottom: 1px solid $gg-red;
+              h5, span, i {
+                color: $gg-light;
+              }
+            }
+            i {
+              padding-right: 10px;
+              position: relative;
+              top: 4px;
+            }
+          }
+
+        }
+        .more {
+          border: none;
+          &:hover {
+            background: transparent;
+            border: none;
+            color: $gg-black-darker;
+          }
+        }
+      }
+
+    }
+
+    .dropdown-menu:before {
+        left:auto;
+        right:15px;
+    }
+
+    .dropdown-menu {
+      top: 30px;
+      width: 255px;
+      right: -5px;
+      left: auto;
+    }
+  }
+
+  .user-thumb {
+    position: relative;
+
+    a.dropdown-toggle {
+      font: {
+        family: $montserrat !important;
+        size: 11px;
+      }
+        text-transform:capitalize;
+    }
+
+    .title {
+      padding: 5px 15px;
+      color: $gg-gray-darker;
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+      @include radius(50%);
+      margin-right: 5px;
+    }
+
+
+    .user-profile-list {
+      border-bottom: 1px solid $gg-light-gray-darker;
+      float: left;
+      .media-left {
+        img {
+          width: 30px;
+          max-width: inherit;
+          height: 30px;
+          @include radius(50%);
+        }
+      }
+
+      .media-heading {
+        margin:3px 0 0;
+        font-size: $gg-base-font-size - 3;
+      }
+
+      .media-body {
+        span {
+          text-transform: capitalize;
+        }
+      }
+
+      li {
+        margin: 0;
+        float: left;
+        a {
+          padding: 10px 15px;
+          display: block;
+          &:hover  {
+            background: $gg-light-gray-darker;
+          }
+
+          .active-status {
+            position: relative;
+            top: 7px;
+            i {
+              font:{
+                size: $gg-base-font-size - 2;
+                weight: bold;
+              }
+              color: $gg-aqua;
+            }
+          }
+
+        }
+      }
+
+      li.active {
+        a {
+          background: $gg-light-gray-darker;
+        }
+      }
+    }
+
+    .settings-items {
+      margin: 0;
+      border-bottom: 1px solid $gg-light-gray-darker;
+      li {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        a {
+          padding: 10px 15px;
+          display: block;
+          box-sizing: border-box;
+          text-transform: capitalize;
+          color: $gg-black;
+          font:{
+            size: $gg-base-font-size - 2;
+          }
+          &:hover  {
+            background: $gg-light-gray-darker;
+          }
+          i {
+            padding-right: 10px;
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
+    }
+
+      .logout-items{
+          li{
+              a{
+                  &:hover{
+                      i{
+                          color:$gg-primary-color;
+                      }
+                      color:$gg-primary-color;
+                  }
+              }
+          }
+      }
+
+    .no-border {
+      border: none;
+    }
+
+  }
+
+}
+
+
+//sticky header
+
+.navbar-fixed-top{
+    @include transition(all 0.3s);
+    &.sticky{
+        padding: 6px 0;
+        @include transition(all 0.3s);
+        border-bottom:1px solid $border-color;
+//        min-height: 60px;
+    }
+}
+.sticky {
+  .navbar {
+    min-height: 60px;
+    padding: 6px 0;
+    box-sizing: border-box;
+    @include transition(all 0.3s);
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 1200;
+    border-bottom: 1px solid $gg-light-gray-darker;
+  }
+
+  .engage-logo {
+    img {
+      @include transition(all 0.3s);
+    }
+  }
+}
+
+
+.main-header .gg-red img {
+  border: 2px solid $gg-core-red;
+}
+
+.main-header .gg-yellow img {
+  border: 2px solid $gg-core-yellow;
+}
+
+.main-header .gg-green img {
+  border: 2px solid $gg-core-green;
+}
+
+.main-header .gg-purple img {
+  border: 2px solid $gg-core-purple;
+}
+
+.main-header .gg-grey img {
+  border: 2px solid $gg-core-grey;
+}
+
+
+.main-header .gg-blue img {
+  border: 2px solid $gg-core-blue;
+}
+
+
+.main-header .gg-turquoise img {
+  border: 2px solid $gg-core-turquoise;
+}
+
+
+
+
+
+//Gnav
+
+.gg-profile-box{
+    position:absolute;
+    background:$gg-light;
+    top:100%;
+    left:0;
+}
+
+.gg-profile-list{
+    width:318px;
+    padding:4px 15px 0;
+}
+
+.profile-slide{
+    padding:0 12px;
+
+    &.owl-carousel .owl-buttons > div{
+        position:absolute;
+        top:50%;
+        @include transformY(0,1,0,-50%);
+        @include box-shadow(none);
+        @include radius(0);
+        background:transparent;
+        border:none;
+        font-size:0;
+        z-index:1;
+        width:20px;
+        height:100%;
+        line-height:40px;
+
+        &:before{
+            content:"";
+            font-family:"gg-iconset";
+            top:0;
+            font-size:7px;
+            color:$text-color-dim;
+        }
+        &.owl-next{
+            right:-10px;
+            &:before{
+               content:"\e92d";
+            }
+        }
+        &.owl-prev{
+            left:-10px;
+
+            &:before{
+               content:"\e92e";
+            }
+        }
+    }
+
+}
+
+.profile-account{
+    margin-bottom:18px;
+
+    .header{
+        border-bottom: 1px solid $border-color;
+        text-align: center;
+        margin-bottom: 19px;
+
+        h3{
+            display:inline-block;
+            font-size: 9px;
+            font-family:$gg-accent-font;
+            font-weight:400;
+            color:$text-color-dim;
+            background:$gg-light;
+            text-transform: uppercase;
+            margin:0;
+            padding: 0 28px;
+            position:relative;
+            bottom:-4px;
+        }
+    }
+
+    .profile-item{
+        text-align:center;
+        .pf-img{
+            margin-bottom:3px;
+            a{
+                display:block;
+                text-align:center;
+            }
+            img{
+                border-width: 2px;
+                @include radius(50%);
+                width:36px;
+                height:36px;
+                display:inline-block;
+            }
+        }
+
+        &:hover{
+            .title-pfl{
+                a{
+                    color:$title-color;
+                }
+            }
+        }
+    }
+
+}
+
+.more-pfl{
+    text-align:center;
+    color:$text-color-dim;
+    cursor:pointer;
+    padding:1px 0 2px;
+    display: block;
+
+    &:hover{
+        color:$title-color;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .user-thumb {
+    position: relative;
+
+    a.dropdown-toggle {
+      font: {
+        family: $montserrat !important;
+        size: 11px;
+      }
+        text-transform:capitalize;
+    }
+
+    .title {
+      padding: 5px 15px;
+      color: $gg-gray-darker;
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+    }
+
+
+    .user-profile-list {
+      border-bottom: 1px solid $gg-light-gray-darker;
+      float: left;
+      .media-left {
+        img {
+          width: 30px;
+          max-width: inherit;
+          height: 30px;
+          @include radius(50%);
+            border-width:2px;
+        }
+      }
+
+      .media-heading {
+        margin:3px 0 0;
+        font-size: $gg-base-font-size - 3;
+      }
+
+      .media-body {
+        span {
+          text-transform: capitalize;
+            font-size:11px;
+            color:$gg-gray-darker;
+        }
+      }
+
+      li {
+        margin: 0;
+        float: left;
+        a {
+          padding: 10px 15px;
+          display: block;
+          &:hover  {
+            background: $gg-light-gray-darker;
+          }
+
+          .active-status {
+            position: relative;
+            top: 7px;
+            i {
+              font:{
+                size: $gg-base-font-size - 2;
+                weight: bold;
+              }
+              color: $gg-aqua;
+            }
+          }
+
+        }
+      }
+
+      li.active {
+        a {
+          background: $gg-light-gray-darker;
+        }
+      }
+    }
+
+    .settings-items {
+      margin: 0;
+      border-bottom: 1px solid $gg-light-gray-darker;
+      li {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        a {
+          padding: 10px 15px;
+          display: block;
+          box-sizing: border-box;
+          text-transform: capitalize;
+          color: $gg-black;
+          font:{
+            size: $gg-base-font-size - 2;
+          }
+          &:hover  {
+            background: $gg-light-gray-darker;
+          }
+          i {
+            padding-right: 10px;
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
+    }
+
+      .logout-items{
+          li{
+              a{
+                  &:hover{
+                      i{
+                          color:$gg-primary-color;
+                      }
+                      color:$gg-primary-color;
+                  }
+              }
+          }
+      }
+
+    .no-border {
+      border: none;
+    }
+
+  }

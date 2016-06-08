@@ -1,0 +1,85 @@
+//Intro section
+
+.intro-box-inner{
+    background:$gg-light;
+    @include radius(3px);
+    @include box-shadow(0px 0px 3px 0px $post-box-shadow);
+    padding: 47px 20px 50px;
+}
+
+.intro-header{
+    text-align:center;
+    padding: 0 25px;
+    
+    .intro-heading{
+        font-size: 48px;
+        color:$gg-primary-color;
+        font-weight:300;
+        margin-bottom:15px;
+    }
+    p{
+        font-size:18px;
+        line-height:30px;
+        
+        span{
+            color:$gg-primary-color;
+        }
+    }
+}
+
+.promo-box-wrapper{
+    margin-top:51px;
+}
+
+.promo-box{
+    text-align:center;
+    margin-bottom:12px;
+    
+    .media{
+        height:80px;
+        margin-bottom:28px;
+        
+        img{
+            max-width:100%;
+            vertical-align: middle;
+            position:relative;
+            
+            top:50%;
+            @include translate(0,-50%);
+        }
+    }
+    .content{
+        margin-bottom:37px;
+        
+        h4{
+            font-size: 11px;
+            text-transform:uppercase;
+            margin-bottom:5px;
+        }
+        p{
+            font-size:12px;
+        }
+    }
+    
+    &.promo-file-profile{
+        .media{
+            img{
+                width:78px;
+            }
+        }
+    }
+     &.promo-add-friend{
+        .media{
+            img{
+                width:62px;
+            }
+        }
+    }
+     &.promo-upload{
+        .media{
+            img{
+                width:57px;
+            }
+        }
+    }
+}

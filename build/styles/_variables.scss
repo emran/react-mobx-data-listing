@@ -1,0 +1,203 @@
+
+// Variables
+// --------------------------------------------------
+
+
+//Theme Typography
+
+
+$opensans:                                'Open Sans', sans-serif;
+$montserrat:                              'Montserrat', sans-serif;
+
+$gg-base-font:                            $opensans;
+$gg-accent-font:                          $montserrat;
+
+$gg-base-font-size:                       14px;
+$gg-base-line-height:                     24px;
+
+
+
+
+//GG core color variable
+$gg-core-red:                             #e94749;
+$gg-core-yellow:                          #ebc151;
+$gg-core-grey:                            #696969;
+$gg-core-purple:                          #d858a1;
+$gg-core-green:                           #65bc45;
+$gg-core-blue:                            #3cb5f4;
+$gg-core-turquoise:                       #55b4ab;
+$gg-core-violet:                          #7c75cc;
+
+
+
+
+// Theme color
+
+$gg-light:                                #fff;
+$gg-light-gray:                           #f7f7f7;
+$gg-light-gray-darker:                    #f2f2f2;
+$gg-gray:                                 #b2b2b2;
+$gg-gray-darker:                          #727272;
+$gg-black:                                #4a4a4a;
+$gg-black-darker:                         #333333;
+$gg-blue:                                 #3cacbd;
+$gg-blue-darker:                          #2d96ae;
+$gg-blue-darkest:                         #1d79a8;
+$gg-red:                                  #e94749;
+$gg-red-darker:                           #d23436;
+$gg-antique:                              #9264ab;
+$gg-aqua:                                 #6db847;
+$gg-yellow:                               #e5b639;
+$gg-pink:                                 #ff83ba;
+$gg-border:                               #e3e3e3;
+
+
+
+//Shadow
+$gg-shadow:                               #e6e6e6;
+$post-box-shadow:                         rgba(0,0,0,0.05);
+
+
+// Color strategy
+
+$gg-primary-color:                        $gg-red;
+$gg-primary-color-darker:                 $gg-red-darker;
+$gg-secondary-color:                      $gg-blue;
+$gg-secondary-color-darker:               $gg-blue-darker;
+
+
+
+//Border color
+
+$border-color:                            $gg-border;
+
+
+//Text color
+
+$text-color:                              $gg-gray-darker;
+$text-color-dim:                          $gg-gray;
+$title-color:                             $gg-black-darker;
+$link-color:                              $gg-secondary-color;
+$link-color-hover:                        $gg-secondary-color-darker;
+$shadow-color:                            $gg-shadow;
+
+
+//Background color
+
+$bg-gray:                                 $gg-light-gray-darker;
+$bg-light:                                $gg-light;
+
+//Engage icon colors
+$nav-news-feed:                           $gg-blue-darkest;
+$nav-profile:                             $gg-red;
+$nav-message:                             $gg-antique;
+$nav-friends:                             $gg-blue-darker;
+$nav-notification:                        $gg-yellow;
+$nav-photo:                               $gg-aqua;
+$nav-event:                               $gg-blue;
+$nav-save:                                $gg-red;
+$nav-circle:                              $gg-blue-darkest;
+
+
+//Social colors
+
+$facebook:                                #3b5998;
+$google:                                  #dd4b39;
+$twitter:                                 #00aced;
+$youtube:                                 #bb0000;
+$linkedin:                                #007bb5;
+$instagram:                               #125688;
+$whatsapp:                                #4dc247;
+$pinterest:                               #cb2027;
+$flickr:                                  #ff0084;
+$tumblr:                                  #32506d;
+$vk:                                      #45668e;
+$wordpress:                               #21759b;
+$stumbleupon:                             #EB4823;
+$yahoo:                                   #7B0099;
+$blogger:                                 #fb8f3d;
+$quora:                                   #a82400;
+$foursquare:                              #0072b1;
+$forrst:                                  #5B9A68;
+$vimeo:                                   #aad450;
+$dribbble:                                #ea4c89;
+$soundcloud:                              #ff3a00;
+
+
+// Links
+
+$link-color:                              $gg-gray-darker;
+$link-hover-color:                        $gg-black-darker;
+
+
+// NAV Typo
+
+$navbar-font-size:                        14px;
+$footer-link-font-size:                   16px;
+
+// NAV color have to change
+
+$navbar-link-color:                       $text-color;
+$navbar-link-hover-color:                 $title-color;
+$nav-link-font:                           $gg-accent-font;
+$nav-link-font-size:                      11px;
+
+$nav-link-hover-bg-gray:                  $gg-light-gray-darker;
+$nav-link-hover-bg-light:                 $gg-light;
+
+//$navbar-link-bg:                 $;
+//$navbar-link-hover-bg:         #f7f7f7 !important;
+//$navbar-link-active-color:     $text-color;
+//$navbar-link-active-bg:        none!important;
+//$navbar-droppdown-hover-bg:    $navbar-link-hover-bg;
+//$navbar-droppdown-hover-color: #888;
+
+
+$sidenav-link-color:                      $gg-black-darker;
+$sidenav-link-hover-color:                $gg-black-darker;
+$sidenav-link-font:                       $gg-accent-font;
+$sidenav-link-font-size:                  11px;
+
+
+$tabnav-link-color:                      $gg-black-darker;
+$tabnav-link-hover-color:                $gg-primary-color;
+$tabnav-link-font:                       $gg-accent-font;
+$tabnav-link-font-size:                  11px;
+
+
+$dropdown-link-bg:                        $gg-light;
+$dropdown-link-hover-bg:                  $gg-light-gray-darker;
+//Nav icon
+
+
+//Buttons variables
+
+$btn-font:                                $gg-base-font;
+$btn-font-size:                           12px;
+$btn-font-weight:                         600;
+$btn-line-height:                         32px;
+$btn-font-size-sm:                        11px;
+$btn-line-height-sm:                      26px;
+
+$btn-color:                               $gg-black-darker;
+$btn-color-light:                         $gg-light;
+$btn-border:                              $border-color;
+
+$btn-default-bg:                          $gg-light-gray;
+$btn-default-hover-bg:                    $gg-light-gray-darker;
+$btn-primary-bg:                          $gg-black-darker;
+$btn-primary-hover-bg:                    $gg-black;
+$btn-danger-bg:                           $gg-red;
+$btn-danger-hover-bg:                     $gg-red-darker;
+
+
+// Form variables
+
+$form-bg:                                 $gg-light-gray-darker;
+$form-border:                             $gg-gray;
+$form-height-default:                     34px;
+
+
+
+
+//Chat variable
