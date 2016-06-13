@@ -4,6 +4,7 @@ class Store{
 
     @observable order       = 'desc';
     @observable pollLists   = [];
+    @observable mostPopular = false;
 
     nextPage        = '';
     isReloadPoll    = false;
@@ -22,11 +23,11 @@ class Store{
     setOrder() {
         var sort = $(".btn-sorting");
         this.order = (sort.hasClass('sort-reverse')) ? 'desc' : 'asc';
+        sort.toggleClass('sort-reverse');
         this.setReloadPoll(true);
         this.setLoader();
         this.nextPage = '';
         this.loadPollList();
-        sort.toggleClass('sort-reverse');
     }
 
     setReloadPoll(flag = false){
@@ -64,6 +65,18 @@ class Store{
                 console.log(err);
             }.bind(this)
         });
+    }
+
+    changeContestType(type) {
+        this.mostPopular = (type == 'Most Popular');
+        console.log(this.mostPopular);
+        if(type == 'Most Recent') {
+            var sort = $(".btn-sorting");
+            if(!sort.hasClass('sort-reverse')){
+                sort.toggleClass('sort-reverse');
+            }
+            this.setOrder();
+        }
     }
 }
 

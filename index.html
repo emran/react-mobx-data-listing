@@ -144,9 +144,13 @@
     <script>
         var profileId = '153';
         var relativeId = 'u1';
+        var BASE_URL = 'http://gg-logic-v2.dev';
+        var API_URL = 'http://gg-logic-v2.dev/api/v1';
         var token =  'QdxXS4HwLEFKkeAvCybiiABNIlWS9L8dQiZzmLoM' ;
         var GGLogicEndpoints = {
-            pollPublicListAPI: 'http://gg-logic-v2.dev/api/v1/public/polls'
+            pollPublicListAPI: API_URL + '/polls',
+            profileDetailsRoute: BASE_URL + '/profiles/slug/about/' + relativeId,
+            pollDetailsRoute: BASE_URL + '/profiles/slug/polls/id/' + relativeId
         }
     </script>
 <script src="files/jquery.min.js"></script>
