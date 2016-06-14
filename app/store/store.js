@@ -35,7 +35,7 @@ class Store{
     }
 
     loadPollList() {
-        var URL = GGLogicEndpoints.pollPublicListAPI + '?order=' + this.order,
+        var URL = GGLogicEndpoints.contestPublicListAPI + '?order=' + this.order,
             POLL_API_URL = (this.pollLists && !this.isReloadPoll) ? URL + "&page=" + this.nextPage : URL ;
 
         if(this.nextPage == -1)
@@ -48,7 +48,7 @@ class Store{
             cache: false,
             success: function(poll) {
                 console.log(poll);
-                this.setPollList(poll.data.poll);
+                this.setPollList(poll.data.contests);
                 if(this.isReloadPoll){
                     this.setReloadPoll();
                 }

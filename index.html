@@ -136,7 +136,7 @@
 
     </section>
     <!-- event-banner -->
-    <div id="poll-list"></div>
+    <div id="contest-list"></div>
     <!-- filter-bar -->
 
 </div>
@@ -148,6 +148,8 @@
         var API_URL = 'http://gg-logic-v2.dev/api/v1';
         var token =  'QdxXS4HwLEFKkeAvCybiiABNIlWS9L8dQiZzmLoM' ;
         var GGLogicEndpoints = {
+            contestPublicListAPI: API_URL + '/contests',
+            contestDetailsRoute: BASE_URL + '/profiles/slug/contests/id/' + relativeId,
             pollPublicListAPI: API_URL + '/polls',
             profileDetailsRoute: BASE_URL + '/profiles/slug/about/' + relativeId,
             pollDetailsRoute: BASE_URL + '/profiles/slug/polls/id/' + relativeId

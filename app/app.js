@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/main';
 
-const rootEl = document.getElementById('poll-list');
+const rootEl = document.getElementById('contest-list');
 ReactDOM.render( <AppContainer><Main/></AppContainer>, rootEl );
 
 if (module.hot) {
