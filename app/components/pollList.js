@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Poll from  './poll';
 import { observer } from "mobx-react";
 import store from '../store/index';
+import NotFound from './notFound';
 
 @observer
 class PollList extends Component {
@@ -19,10 +20,13 @@ class PollList extends Component {
     }
   render() {
       return (
-        <div className="event-post-wrapper">
+        <div className={(store.isReloadPoll ? "event-post-wrapper preloader" : "event-post-wrapper")}>
             {store.pollLists.map(function(poll, index){
                 return <Poll poll={poll} key={index} />;
             })}
+
+            { (store.pollLists.length > 0) ? '' : <NotFound />  }
+
             {( store.showLoader
                     ? <div className="content-loading"><i className="fa fa-spinner fa-pulse"> </i></div>
                     : ''
