@@ -49,6 +49,7 @@ class Store{
             success: function(poll) {
                 console.log(poll);
                 this.setPollList(poll.data.contests);
+                $("#content-count").html(poll.data.total);
                 if(this.isReloadPoll){
                     this.setReloadPoll();
                 }
