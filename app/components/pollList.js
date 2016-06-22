@@ -9,6 +9,7 @@ class PollList extends Component {
 
     constructor(props) {
         super(props);
+        store.setReloadPoll(true);
         store.loadPollList();
     }
     componentDidMount () {

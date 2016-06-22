@@ -38,7 +38,7 @@ class Poll extends Component {
                             <ul>
                                 <li className="tag"><a href="#">{this.getCategory(this.props.poll.category)}</a></li>
                                 <li className="author"><a href={this.getProfileDetilsRoute(this.props.poll.profile)}>{this.props.poll.profile.display_name}</a></li>
-                                <li className="dtime">{moment(this.props.poll.created_at).format("MMM MM")}, {moment(this.props.poll.created_at).fromNow()}</li>
+                                <li className="dtime">{moment(this.props.poll.created_at).format("MMM DD")}, {moment(this.props.poll.created_at).fromNow()}</li>
                             </ul>
                         </div>
                     </div>
