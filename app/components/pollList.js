@@ -25,7 +25,6 @@ class PollList extends Component {
                 return <Poll poll={poll} key={index} />;
             })}
 
-            { (store.pollLists.length > 0) ? '' : <NotFound />  }
 
             {( store.showLoader
                     ? <div className="content-loading"><i className="fa fa-spinner fa-pulse"> </i></div>

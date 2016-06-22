@@ -5,9 +5,9 @@ class Store{
     @observable order       = 'desc';
     @observable pollLists   = [];
     @observable mostPopular = false;
+    @observable isReloadPoll = false;
 
     nextPage        = '';
-    isReloadPoll    = false;
     showLoader      = true;
 
     setPollList (poll) {
@@ -51,7 +51,7 @@ class Store{
                 this.setPollList(poll.data.contests);
                 $("#content-count").html(poll.data.total);
                 if(this.isReloadPoll){
-                    this.setReloadPoll();
+                    this.setReloadPoll(false);
                 }
                 if((poll.data.paginate.current != 'undefined') ){
                     if(poll.data.paginate.total > (poll.data.paginate.current * poll.data.paginate.per_page)) {
