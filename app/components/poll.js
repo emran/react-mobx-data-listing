@@ -48,7 +48,8 @@ class Poll extends Component {
                         <div className="tool-left">
                             <ul className="tool-list">
                                 <li><i className="gg-power"></i><span>{this.props.poll.total_votes}</span> <span className="grid-hide">Votes</span></li>
-                                <li data-toggle="tooltip" title={moment(this.props.poll.end_date).format("D MMM, h:mm A")}><i className="gg-clock"></i><span>{moment(this.props.poll.settings.end_date).toNow(true)}</span> <span className="grid-hide">left</span></li>
+                                <li data-toggle="tooltip" title={ (this.props.poll.end_date) ? moment(this.props.poll.end_date).format("D MMM, h:mm A") : ''}><i className="gg-clock"></i>
+                                    <span>{(this.props.poll.end_date) ? moment(this.props.poll.settings.end_date).toNow(true) : ''}</span> <span className="grid-hide">left</span></li>
                                 <li><i className="gg-rating"></i><span>20</span></li>
                             </ul>
                         </div>
